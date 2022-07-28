@@ -33,7 +33,12 @@ def main(args):
     if args.continue_epoch:
         model_parameter = join(args.model_parameter, f"parameter_{args.continue_epoch}.pt")
         try:
-            model.load_state_dict(torch.load(model_parameter))
+            checkpoint = torch.load(model_parameter)
+            assert(args.continue_epoch==int(checkpoint['epoch']))
+            model.load_state_dict(checkpoint['model_state_dict'])
+            optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+            criterion.load_state_dict(checkpoint['criterion_state_dict'])
+            if scheduler: scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
             print(f"Model parameter with {args.continue_epoch} epoch(s) exists in file system.")
         except:
             print(f"There is no such parameter with {args.continue_epoch} epoch(s).")
