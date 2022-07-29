@@ -1,4 +1,5 @@
 
+from distutils.command.clean import clean
 import os, glob, csv
 from os.path import join, exists
 import numpy as np
@@ -56,16 +57,19 @@ dataset
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train', action=argparse.BooleanOptionalAction,required=True)
+    parser.add_argument('--train', action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument('--vis_sound', action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('--root_dataset_folder', type=str, required=True)
     parser.add_argument('--output_seen_clean_folder', type=str, default='')
     parser.add_argument('--output_unseen_clean_folder', type=str, default='')
     parser.add_argument('--output_seen_noisy_folder', type=str, default='')
     parser.add_argument('--output_unseen_noisy_folder', type=str, default='')
-    parser.add_argument('--output_seen_dataset_csv', type=str, required=True)
+    parser.add_argument('--output_seen_noise_folder', type=str, default='')
+    parser.add_argument('--output_unseen_noise_folder', type=str, default='')
+    parser.add_argument('--output_seen_dataset_csv', type=str, default='')
     parser.add_argument('--output_unseen_dataset_csv', type=str, default='')
-    parser.add_argument('--output_log_txt', type=str, required=True)
-    parser.add_argument('--snr', type=float, default='', required=True)
+    parser.add_argument('--output_log_txt', type=str, default='')
+    parser.add_argument('--snr', type=float, default=10)
     args = parser.parse_args()
     return args
 
@@ -132,7 +136,7 @@ def vis_clean_sound_length(clean_folder):
 
 def save_data(name, amp, length, csv_writer, args, sample_rate=16000, b_seen=True):
 
-    clean_name, noisy_name = name['clean'], name['noisy']
+    clean_name, noisy_name, noise_name = name['clean'], name['noisy'], name['noise']
     clean_amp, noise_amp = amp['clean'], amp['noise']
     clean_len, noise_len = length['clean'], length['noise']
 
@@ -151,12 +155,15 @@ def save_data(name, amp, length, csv_writer, args, sample_rate=16000, b_seen=Tru
     if b_seen:
         output_noisy_folder = args.output_seen_noisy_folder
         output_clean_folder = args.output_seen_clean_folder
+        output_noise_folder = args.output_seen_noise_folder
     else:
         output_noisy_folder = args.output_unseen_noisy_folder
         output_clean_folder = args.output_unseen_clean_folder
+        output_noise_folder = args.output_unseen_noise_folder
     
-    output_noisy_file = join(output_noisy_folder , noisy_name)
+    output_noisy_file = join(output_noisy_folder, noisy_name)
     output_clean_file = join(output_clean_folder, clean_name)
+    output_noise_file = join(output_noise_folder, noise_name)
 
     torchaudio.save(
         output_noisy_file,
@@ -172,7 +179,15 @@ def save_data(name, amp, length, csv_writer, args, sample_rate=16000, b_seen=Tru
             sample_rate
         )
 
-    csv_writer.writerow([noisy_name, clean_name])
+    noise_exist = exists(output_noise_file)
+    if not noise_exist:
+        torchaudio.save(
+            output_noise_file,
+            adjusted_noise_amp,
+            sample_rate
+        )
+
+    csv_writer.writerow([noisy_name, clean_name, noise_name])
 
 
 def create_train_data(args):
@@ -188,10 +203,11 @@ def create_train_data(args):
     os.chdir(noise_folder)
     noise_files = glob.glob("*.wav")
     for noise_file in noise_files:
-        noise_amp, noise_sample_rate = torchaudio.load(join(noise_folder, noise_file))
+        noise_amp, _ = torchaudio.load(join(noise_folder, noise_file))
         noise_amp = torch.repeat_interleave(noise_amp, 2, dim=1)
         noise_len = noise_amp.size(1)
         clean_sub_folders = os.listdir(clean_folder)
+        noise_idx = 0
         for clean_sub_folder in clean_sub_folders:
             clean_sub_sub_folders = os.listdir(join(clean_folder, clean_sub_folder))
             for clean_sub_sub_folder in clean_sub_sub_folders:
@@ -217,8 +233,15 @@ def create_train_data(args):
                             clean_file
                         )
                     )
+                    noise_name = '_'.join(
+                        (
+                            noise_file.split('.')[0],
+                            str(noise_idx)
+                        )
+                    ) + '.WAV'
+                    noise_idx += 1
                     save_data(
-                        name={'clean': clean_name, 'noisy': noisy_name},
+                        name={'clean': clean_name, 'noisy': noisy_name, 'noise': noise_name},
                         amp={'clean': clean_amp, 'noise': noise_amp},
                         length={'clean': clean_len, 'noise': noise_len},
                         csv_writer=csv_writer,
@@ -253,11 +276,12 @@ def create_test_data(args):
         noise_folder = seen_noise_folder if b_seen else unseen_noise_folder
         os.chdir(noise_folder)
         noise_files = glob.glob("*.wav")
-        for noise_file in noise_files:
-            noise_amp, noise_sample_rate = torchaudio.load(join(noise_folder, noise_file))
+        for i, noise_file in enumerate(noise_files):
+            noise_amp, _ = torchaudio.load(join(noise_folder, noise_file))
             noise_amp =  torch.repeat_interleave(noise_amp, 2, dim=1)
             noise_len = noise_amp.size(1)
             clean_sub_folders = os.listdir(clean_folder)
+            noise_idx = 0
             for clean_sub_folder in clean_sub_folders:
                 clean_sub_sub_folders = os.listdir(join(clean_folder, clean_sub_folder))
                 for clean_sub_sub_folder in clean_sub_sub_folders:
@@ -283,8 +307,17 @@ def create_test_data(args):
                                 clean_file
                             )
                         )
+                        noise_name = '_'.join(
+                            (
+                                noise_file.split('.')[0],
+                                str(noise_idx)
+                            )
+                        ) + '.WAV'
+
+                        noise_idx += 1
+
                         save_data(
-                            name={'clean': clean_name, 'noisy': noisy_name},
+                            name={'clean': clean_name, 'noisy': noisy_name, 'noise': noise_name},
                             amp={'clean': clean_amp, 'noise': noise_amp},
                             length={'clean': clean_len, 'noise': noise_len},
                             csv_writer= seen_csv_writer if b_seen else unseen_csv_writer,
@@ -312,10 +345,17 @@ if __name__ == '__main__':
 
     args = get_args()
 
-    vis_clean_sound_length(args.clean_folder)
-
-    if args.train:
-        create_train_data(args)
+    if args.vis_sound:
+        root_dataset_folder = args.root_dataset_folder
+        clean_folder = join(join(root_dataset_folder, "TIMIT"), "TRAIN")
+        print("TRAIN")
+        vis_clean_sound_length(clean_folder)
+        clean_folder = join(join(root_dataset_folder, "TIMIT"), "TEST")
+        print("TEST")
+        vis_clean_sound_length(clean_folder)
     else:
-        create_test_data(args)
+        if args.train:
+            create_train_data(args)
+        else:
+            create_test_data(args)
 
