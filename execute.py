@@ -8,11 +8,12 @@ from dataset import get_test_dataset, get_train_dataset, cal_istft
 
 sampling_rate = 16000
 
-def train(args, model, criterion, optimizer, scheduler=None, scaler=None, continue_epoch=0, num_epochs=100, num_workers=4, data_format=None, device="cuda"):
+def train(args, model, criterion, optimizer, scheduler=None, scaler=None, continue_epoch=0, num_epochs=100, data_format=None, num_workers=4, device="cuda"):
 
     train_loader, validation_loader = get_train_dataset(
         root_folder=args.data_root_folder,
         transform=data_format['transform'],
+        logarithm=data_format['logarithm'],
         validation_ratio=data_format['validation_ratio'],
         batch_size=data_format['batch_size'],
         num_workers=num_workers
@@ -105,6 +106,7 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
     seen_test_loader, unseen_test_loader = get_test_dataset(
         root_folder=args.data_root_folder,
         transform=data_format['transform'],
+        logarithm=data_format['logarithm'],
         num_workers=num_workers
     )
     bl_seen = [True, False]

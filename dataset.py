@@ -78,14 +78,19 @@ root_folder
            └─dataset.csv
 """
 class CustomAudioDataset(Dataset):
-    def __init__(self, root='./', train=True, seen=True, transform=None):
+    def __init__(self, root='./', train=True, seen=True, transform=None, logarithm=False):
         super().__init__()
         self.train = train
         self.seen = seen
-        if self.train:
-            data_folder = join(root, "train")
+        self.logarithm = logarithm
+        if self.logarithm:
+            data_folder = join(root, "data_log")
         else:
-            data_folder = join(root, "test")
+            data_folder = join(root, "data")
+        if self.train:
+            data_folder = join(data_folder, "train")
+        else:
+            data_folder = join(data_folder, "test")
             if self.seen:
                 data_folder = join(data_folder, "seen")
             else:
@@ -106,9 +111,8 @@ class CustomAudioDataset(Dataset):
         noisy_amp, _ = torchaudio.load(noisy_file)
         clean_amp, _ = torchaudio.load(clean_file)
 
-        audio_length = noisy_amp.shape[1]
-
-        if self.train:
+        if self.train and not self.logarithm:
+            audio_length = noisy_amp.shape[1]
             if audio_length < CONST_LENGTH:
                 zeros = torch.zeros((1, CONST_LENGTH - audio_length))
                 noisy_amp = torch.cat((noisy_amp, zeros), dim=1)
@@ -132,8 +136,8 @@ class CustomAudioDataset(Dataset):
         return sample
 
 
-def get_train_dataset(root_folder='\.', transform=False, validation_ratio=5, batch_size=32, num_workers=1):
-    train_dataset = CustomAudioDataset(root=root_folder, transform=transform)
+def get_train_dataset(root_folder='\.', transform=False, logarithm=False, validation_ratio=5, batch_size=32, num_workers=1):
+    train_dataset = CustomAudioDataset(root=root_folder, transform=transform, logarithm=logarithm)
 
     train_dataset_length = train_dataset.__len__()
 
@@ -162,9 +166,9 @@ def get_train_dataset(root_folder='\.', transform=False, validation_ratio=5, bat
     return train_loader, validation_loader
 
 
-def get_test_dataset(root_folder='\.', transform=None, num_workers=1):
-    seen_test_dataset = CustomAudioDataset(root=root_folder, train=False, transform=transform)
-    unseen_test_dataset = CustomAudioDataset(root=root_folder, train=False, seen=False, transform=transform)
+def get_test_dataset(root_folder='\.', transform=None, logarithm=False, num_workers=1):
+    seen_test_dataset = CustomAudioDataset(root=root_folder, train=False, transform=transform, logarithm=logarithm)
+    unseen_test_dataset = CustomAudioDataset(root=root_folder, train=False, seen=False, transform=transform, logarithm=logarithm)
 
     seen_test_loader = DataLoader(
         dataset=seen_test_dataset,

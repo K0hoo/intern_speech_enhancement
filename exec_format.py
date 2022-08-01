@@ -1,5 +1,5 @@
 
-from os.path import join, exists
+from os.path import join
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch
 import torch.nn as nn
@@ -25,9 +25,11 @@ def main(args):
 
     # set data_format
     data_format = {
-        'transform': False,
-        'validation_ratio': 5,
-        'batch_size': 32
+        'transform': False, # boolean value; true: magnitude-angle, false: real-img
+        'logarithm': False, # boolean value; true: 2 seconds without zero padding
+                            # boolean value; false: 4 seconds with zero padding
+        'validation_ratio': 5, # int value; train:validation = <int value>:1
+        'batch_size': 32 # int value; batch size
     }
 
     if args.continue_epoch:
