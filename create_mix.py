@@ -59,11 +59,16 @@ dataset
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train', action=argparse.BooleanOptionalAction, default=True)
-    parser.add_argument('--vis_sound', action=argparse.BooleanOptionalAction, default=False)
-    parser.add_argument('--logarithm', '--log', action=argparse.BooleanOptionalAction, default=False)
-    parser.add_argument('--root_dataset_folder', type=str, required=True)
-    parser.add_argument('--snr', type=float, default=10)
+    parser.add_argument('--train', action=argparse.BooleanOptionalAction, default=True, 
+        help='This has boolean value that true means train.')
+    parser.add_argument('--vis_sound', action=argparse.BooleanOptionalAction, default=False,
+        help='This boolean value means whether visualizing the distribution of sound data or creating noisy sound.')
+    parser.add_argument('--logarithm', '--log', action=argparse.BooleanOptionalAction, default=False,
+        help='data for logarithm form or not.')
+    parser.add_argument('--root_dataset_folder', type=str, required=True,
+        help='This root means the path the source data is saved and also newly made data will be saved.')
+    parser.add_argument('--snr', type=float, default=10,
+        help='snr')
     args = parser.parse_args()
     return args
 
