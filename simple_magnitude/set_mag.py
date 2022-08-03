@@ -5,23 +5,23 @@ import torch
 import torch.nn as nn
 
 # import model
-from models import Wiener_LSTM
-from wiener_magnitude.exec_wiener import train, test
+from models import SimpleLSTM
+from simple_magnitude.exec_mag import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# set hyper-parameters
-num_epochs, batch_size, learning_rate, validation_ratio, num_workers = 200, 64, 0.004, 5, 6
+# setting hyper-parameters
+num_epochs, batch_size, learning_rate, validation_ratio, num_workers = 100, 32, 0.002, 5, 4
 
-# set model and other optimizer
-model = Wiener_LSTM().to(device)
+# setting model and other optimizer
+model = SimpleLSTM().to(device)
 criterion = nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
-scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.2, patience=3, cooldown=2)
+scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.5, patience=3, cooldown=2)
 scaler = torch.cuda.amp.GradScaler()
 
 def main(args):
-
+    
     print(f"device: {device}")
 
     # set data_format
@@ -30,15 +30,15 @@ def main(args):
         'logarithm': False, # boolean value; true: 2 seconds without zero padding
                             # boolean value; false: 4 seconds with zero padding
                             # logarithm means log-magnitude so, false transform and true logarithm is not allowed.
-        'wiener': True, # wiener also means log-magnitude.
-        'validation_ratio': validation_ratio, # int value; train:validation = <int value>-1:1
+        'wiener': False, # wiener also means log-magnitude.
+        'validation_ratio': validation_ratio, # int value; train:validation = <int value>:1
         'batch_size': batch_size # int value; batch size
     }
 
     assert(data_format['mag_angle'] or not data_format['logarithm'])
     assert(data_format['mag_angle'] or not data_format['wiener'])
 
-    b_train = True
+    b_train = args.train
     output_checkpoint = join(args.root_folder, args.sub_folder)
     checkpoint_path = join(output_checkpoint, 'checkpoint')
 

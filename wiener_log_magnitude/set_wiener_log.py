@@ -75,12 +75,15 @@ def main(args):
             device=device,
         )
     
-    print("The model will be tested.")
-    test(
-        args=args,
-        model=model,
-        criterion=criterion,
-        num_workers=num_workers,
-        data_format=data_format,
-        device=device
-    )
+    if args.test:
+        print("The model will be tested.")
+        test(
+            args=args,
+            model=model,
+            criterion=criterion,
+            num_workers=num_workers,
+            data_format=data_format,
+            device=device
+        )
+
+    print("done.")

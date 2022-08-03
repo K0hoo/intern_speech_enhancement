@@ -2,7 +2,6 @@
 import torch
 import torch.nn as nn
 from os.path import join
-from pesq import pesq
 
 from dataset import get_test_dataset, get_train_dataset, cal_istft, save_result
 
@@ -28,19 +27,17 @@ def train(args, model, criterion, optimizer, scheduler=None, scaler=None, contin
     ouptut_checkpoint = join(output_folder, 'checkpoint')
 
     for epoch in range(continue_epoch, num_epochs):
-        
+    
         # 1. Train
         model.train()
-        for i, (noisy, clean, noise) in enumerate(train_loader):
+        for i, (noisy, clean, _) in enumerate(train_loader):
             
             noisy_mag = noisy['mag'].to(device)
             clean_mag = clean['mag'].to(device)
-            noise_mag = noise['mag'].to(device)
-            target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device=device)
 
             with torch.cuda.amp.autocast(amp_on):
                 output = model(noisy_mag)
-                loss = criterion(output, target)
+                loss = criterion(output, clean_mag)
             
             if amp_on:
                 scaler.scale(loss).backward()
@@ -64,16 +61,14 @@ def train(args, model, criterion, optimizer, scheduler=None, scaler=None, contin
         validation_loss = 0
         with torch.no_grad():
             model.eval()
-            for i, (noisy, clean, noise) in enumerate(validation_loader):
+            for i, (noisy, clean, _) in enumerate(validation_loader):
 
                 noisy_mag = noisy['mag'].to(device)
                 clean_mag = clean['mag'].to(device)
-                noise_mag = noise['mag'].to(device)
-                target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device=device)
 
                 with torch.cuda.amp.autocast(amp_on):
                     output = model(noisy_mag)
-                    loss = criterion(output, target)
+                    loss = criterion(output, clean_mag)
 
                 validation_loss += loss.item()
 
@@ -96,7 +91,7 @@ def train(args, model, criterion, optimizer, scheduler=None, scaler=None, contin
 
         # 5. When epoch is the multiple of 5, the parameter is saved.
         if (epoch + 1) % 5 == 0:
-            name = f"checkpoint_{epoch + 1}.pt"
+            name = f"ckeckpoint_{epoch + 1}.pt"
             parameter_path = join(ouptut_checkpoint, name)
             if scheduler:
                 torch.save({
@@ -140,20 +135,18 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
         model.eval()
         for b_seen in bl_seen:
             total_test_loss = 0
-            pesq_score= 0
             test_loader = seen_test_loader if b_seen else unseen_test_loader
 
             # The batch size for test is just 1. noisy, clean, and target data is just for 1.
             # clean data is just for making result data.
-            for i, (noisy, clean, noise) in enumerate(test_loader):
+            for i, (noisy, clean, _) in enumerate(test_loader):
 
                 # 1. The output is calculated.
-                noisy_mag, clean_mag, noise_mag = noisy['mag'].to(device), clean['mag'], noise['mag']
-                target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device)
+                noisy_mag, clean_mag = noisy['mag'], clean['mag']
 
                 with torch.cuda.amp.autocast(amp_on):
                     output = model(noisy_mag)
-                    test_loss = criterion(output, target).item()
+                    test_loss = criterion(output, clean_mag).item()
                     
                 total_test_loss += test_loss
 
@@ -162,30 +155,26 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
                     result_root_path = output_seen_result if b_seen else output_unseen_result
                     file_name = ("s_result" if b_seen else "u_result") + str(i + 1) + ".wav"
                     
-                    output = output.type(torch.DoubleTensor)
-                    noisy_mag = noisy_mag.to('cpu')
+                    output = torch.tensor.new_tensor(output, dtype=torch.float32).to('cpu')
 
                     # 3. The amplitude is made from STFT form.
                     # When output is mask, the stft_mag is output(mask) * noisy.
-                    esti_amp = cal_istft(stft_mag=(output * noisy_mag), stft_angle=noisy['angle'], mag_angle=data_format['mag_angle']).to('cpu')
-                    noisy_amp = cal_istft(stft_mag=noisy_mag, stft_angle=noisy['angle'], mag_angle=data_format['mag_angle']).to('cpu')
-                    clean_amp = cal_istft(stft_mag=clean_mag, stft_angle=clean['angle'], mag_angle=data_format['mag_angle']).to('cpu')
+                    esti_amp = cal_istft(stft_mag=output, stft_angle=noisy['angle'], mag_angle=data_format['mag_angle']).to('cpu')
+                    noisy_amp = cal_istft(stft_mag=noisy, stft_angle=noisy['angle'], mag_angle=data_format['mag_angle']).to('cpu')
+                    clean_amp = cal_istft(stft_mag=clean, stft_angle=clean['angle'], mag_angle=data_format['mag_angle']).to('cpu')
 
-                    # 4. pesq
-                    pesq_score += pesq(sampling_rate, clean_amp, esti_amp, 'wb')
-
-                    # 5. The created amplitude is saved by save_result function.
+                    # 4. The created amplitude is saved by save_result function.
                     # If the sound is saved successfully, it returns True.
                     if save_result(output_test_log, result_root_path, file_name, esti_amp, noisy_amp, clean_amp):
                         message = f"{file_name} is created with {test_loss:.6f} loss."
                         print(message)
                         test_log_file = open(output_test_log, 'a', newline='')
-                        test_log_file.write(message + '\n')
+                        test_log_file.write(message)
                         test_log_file.close()
 
-            # 6. The test loss is printed.
+            # 5. The test loss is printed.
             total_test_loss /= test_loader.__len__()
-            message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}, pesq score: {pesq_score/(test_loader.__len__()//100)}"
+            message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}"
             print(message)
             test_log_file = open(output_test_log, 'a', newline='')
             test_log_file.write(message + '\n')
