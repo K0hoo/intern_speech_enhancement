@@ -43,29 +43,31 @@ class RealImg_LSTM(nn.Module):
         return out
 
 
-class RealImg_Norm_LSTM(nn.Module):
+class Wiener_LSTM(nn.Module):
     def __init__(self):
-        super(RealImg_Norm_LSTM, self).__init__()
-        
-        self.lstm1 = nn.LSTM(input_size=514, hidden_size=512, bidirectional=True, batch_first=True)
+        super(Wiener_LSTM, self).__init__()
+        self.input_size = 257
+        self.hidden_size = 256
+
+        self.lstm1 = nn.LSTM(input_size=self.input_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
         self.act1 = nn.Sequential(
-            nn.Linear(1024, 512),
+            nn.Linear(self.hidden_size * 2, self.hidden_size),
             nn.ReLU(inplace=False)
         )
 
-        self.norm1 = nn.GroupNorm(512, 512)
+        self.norm1 = nn.GroupNorm(self.hidden_size, self.hidden_size)
 
-        self.lstm2 = nn.LSTM(input_size=512, hidden_size=512, bidirectional=True, batch_first=True)
+        self.lstm2 = nn.LSTM(input_size=self.hidden_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
         self.act2 = nn.Sequential(
-            nn.Linear(1024, 512),
+            nn.Linear(self.hidden_size * 2, self.hidden_size),
             nn.ReLU(inplace=False)
         )
 
-        self.norm2 = nn.GroupNorm(512, 512)
+        self.norm2 = nn.GroupNorm(self.hidden_size, self.hidden_size)
 
-        self.lstm3 = nn.LSTM(input_size=512, hidden_size=512, bidirectional=True, batch_first=True)
+        self.lstm3 = nn.LSTM(input_size=self.hidden_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
         self.act3 = nn.Sequential(
-            nn.Linear(1024, 514),
+            nn.Linear(self.hidden_size * 2, self.input_size),
             nn.Sigmoid()
         )
 
@@ -85,4 +87,4 @@ class RealImg_Norm_LSTM(nn.Module):
         out, _ = self.lstm3(out)
         out = self.act3(out)
     
-        return x * out
+        return out
