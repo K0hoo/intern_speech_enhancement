@@ -1,0 +1,104 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run mag-phase model",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--sub_folder", "simple_magnitude"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Run real-img model",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--datar_root_folder", "${workspaceFolder}/dataset/",
+                "--sub_folder", "simple_real_imag"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Run wiener filter model",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--sub_folder", "wiener_magnitude",
+                "--continue_epoch", "5",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Run log-wiener filter model",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--sub_folder", "wiener_log_magnitude",
+                "--no-train",
+                "--continue_epoch", "200"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Visualize sound length",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/noisy_creator.py",
+            "args": [
+                "--vis_sound",
+                "--root_dataset_folder", "${workspaceFolder}/dataset/",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Create train noisy sound",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/noisy_creator.py",
+            "args": [
+                "--train",
+                "--root_dataset_folder", "${workspaceFolder}/dataset/",
+                "--snr", "10",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Create test noisy sound",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/noisy_creator.py",
+            "args": [
+                "--no-train",
+                "--root_dataset_folder", "${workspaceFolder}/dataset/",
+                "--snr", "10",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Create train log noisy sound",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/noisy_creator.py",
+            "args": [
+                "--train",
+                "--root_dataset_folder", "${workspaceFolder}/dataset/",
+                "--log",
+                "--snr", "10",
+            ],
+            "console": "integratedTerminal",
+        }
+    ]
+}

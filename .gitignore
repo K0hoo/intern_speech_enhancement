@@ -1,3 +1,9 @@
-.vscode
 .idea
 __pycache__
+dataset
+train
+test
+parameter
+*.wav
+*.WAV
+*.pt
