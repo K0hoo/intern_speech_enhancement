@@ -7,3 +7,7 @@ parameter
 *.wav
 *.WAV
 *.pt
+*.ckpt
+*.yaml
+lightning_logs
+ray_test

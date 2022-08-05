@@ -2,6 +2,7 @@
 import torch
 import torch.nn as nn
 from os.path import join
+
 from pesq import pesq
 
 from dataset import get_test_dataset, get_train_dataset, cal_istft, save_result
@@ -140,7 +141,7 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
         model.eval()
         for b_seen in bl_seen:
             total_test_loss = 0
-            pesq_score= 0
+            total_pesq_score= 0
             test_loader = seen_test_loader if b_seen else unseen_test_loader
 
             # The batch size for test is just 1. noisy, clean, and target data is just for 1.
@@ -154,7 +155,7 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
                 with torch.cuda.amp.autocast(amp_on):
                     output = model(noisy_mag)
                     test_loss = criterion(output, target).item()
-                    
+
                 total_test_loss += test_loss
 
                 # 2. When the number of data is the multiple of 100, the sound is saved.
@@ -172,12 +173,14 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
                     clean_amp = cal_istft(stft_mag=clean_mag, stft_angle=clean['angle'], mag_angle=data_format['mag_angle']).to('cpu')
 
                     # 4. pesq
-                    pesq_score += pesq(sampling_rate, clean_amp, esti_amp, 'wb')
+                    pesq_score = pesq(sampling_rate, clean_amp.numpy()[0], esti_amp.numpy()[0], 'wb')
+                    total_pesq_score += pesq_score
+
 
                     # 5. The created amplitude is saved by save_result function.
                     # If the sound is saved successfully, it returns True.
                     if save_result(output_test_log, result_root_path, file_name, esti_amp, noisy_amp, clean_amp):
-                        message = f"{file_name} is created with {test_loss:.6f} loss."
+                        message = f"{file_name} is created with {test_loss:.6f} loss. pesq: {pesq_score}"
                         print(message)
                         test_log_file = open(output_test_log, 'a', newline='')
                         test_log_file.write(message + '\n')
@@ -185,7 +188,9 @@ def test(args, model, criterion, num_workers=4, data_format=None, device="cuda")
 
             # 6. The test loss is printed.
             total_test_loss /= test_loader.__len__()
+            total_pesq_score /= (test_loader.__len__()//100)
             message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}, pesq score: {pesq_score/(test_loader.__len__()//100)}"
+            message += f" pesq: {total_pesq_score}"
             print(message)
             test_log_file = open(output_test_log, 'a', newline='')
             test_log_file.write(message + '\n')
