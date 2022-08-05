@@ -2,7 +2,8 @@
 import argparse
 
 import wiener_magnitude.set_wiener as set_wiener
-
+# import wiener_log_magnitude_pl.wiener_log_pl as wiener_log_pl
+# import wiener_log_magnitude.set_wiener_log as set_wiener_log
 
 """
 When you want to test other situations, follow the below step.
@@ -21,7 +22,6 @@ if __name__ == "__main__":
     parser.add_argument('--test', action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument('--fp16', action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument('--clip', default=0.25, type=float, help='gradient clip threshold')
-    parser.add_argument('--continue_epoch', type=int, default=0)
     args = parser.parse_args()
     
 

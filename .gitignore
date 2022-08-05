@@ -11,3 +11,4 @@ parameter
 *.yaml
 lightning_logs
 ray_test
+runs
