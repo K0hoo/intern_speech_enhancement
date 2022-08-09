@@ -7,7 +7,7 @@ from torch.utils.tensorboard import SummaryWriter
 from dataset import get_test_dataset, get_train_dataset
 
 # import model
-from models import Wiener_LSTM
+from models_LSTM import Wiener_LSTM
 from wiener_log_magnitude.exec_wiener_log import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"

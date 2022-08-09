@@ -9,7 +9,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 import ray
 from ray_lightning import RayShardedStrategy
 
-from models import Wiener_LSTM
+from models_LSTM import Wiener_LSTM
 from dataset import get_train_dataset, get_test_dataset, cal_istft, save_result
 
 num_epochs, batch_size, learning_rate, validation_ratio, num_workers = 200, 64, 0.005, 5, 6

@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 
 # import model
-from models import RealImg_LSTM
+from models_LSTM import RealImg_LSTM
 from simple_real_imag.exec_real_img import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"

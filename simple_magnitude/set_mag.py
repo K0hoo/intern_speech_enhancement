@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 
 # import model
-from models import SimpleLSTM
+from models_LSTM import SimpleLSTM
 from simple_magnitude.exec_mag import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
