@@ -208,7 +208,7 @@ def test(
             # 6. The test loss is printed.
             total_test_loss /= test_loader.__len__()
             total_pesq_score /= (test_loader.__len__()//100)
-            message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}, pesq score: {pesq_score/(test_loader.__len__()//100)}"
+            message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}"
             message += f" pesq: {total_pesq_score}"
             print(message)
             test_log_file = open(output_test_log, 'a', newline='')
