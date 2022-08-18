@@ -8,28 +8,28 @@ from dataset import get_test_dataset, get_train_dataset
 
 # import model
 from models_LSTM import Wiener_LSTM
-from wiener_magnitude.exec_wiener import train, test
+from LSTM_wiener_log_magnitude.exec_wiener_log import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # set hyper-parameters
-continue_epoch = 200 # int value; the epoch that training is resumed
-num_epochs = 300 # int value; the epoch that training is ended
+continue_epoch = 0
+num_epochs = 200
 batch_size = 64
-learning_rate = 0.004
-validation_ratio = 5 # int value; train:validation = <int value>-1:1
+learning_rate = 0.005
+validation_ratio = 5
 num_workers = 6
 
 # set model and other optimizer
 model = Wiener_LSTM().to(device)
 criterion = nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
-scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.2, patience=3, cooldown=2)
+scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.5, patience=3, cooldown=2)
 scaler = torch.cuda.amp.GradScaler()
 
 # set data_format
 mag_angle = True, # boolean value; true: magnitude-angle, false: real-img
-logarithm = False, # boolean value; true: 2 seconds without zero padding
+logarithm = True, # boolean value; true: 2 seconds without zero padding
                 # boolean value; false: 4 seconds with zero padding
                 # logarithm means log-magnitude so, false transform and true logarithm is not allowed.
 wiener = True, # wiener also means log-magnitude.
@@ -43,9 +43,9 @@ def main(args):
     assert(mag_angle or not logarithm)
     assert(mag_angle or not wiener)
 
-    b_train = True
-    output_checkpoint = join(args.root_folder, args.sub_folder)
-    checkpoint_path = join(output_checkpoint, 'checkpoint')
+    b_train = args.train
+    output_folder = join(args.root_folder, args.sub_folder)
+    checkpoint_path = join(output_folder, 'checkpoint')
 
     if continue_epoch:
         checkpoint_file = join(checkpoint_path, f"checkpoint_{continue_epoch}.pt")
@@ -66,7 +66,7 @@ def main(args):
         print("There is no saved checkpoint.")
 
     if b_train:
-        
+
         print("The model will be trained.")
 
         # load data for train and validation
@@ -109,7 +109,7 @@ def main(args):
                 'logarithm': logarithm
             },
             num_workers=num_workers
-        )
+        )        
 
         test_args = {
             'args': args,

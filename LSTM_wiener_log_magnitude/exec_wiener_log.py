@@ -30,25 +30,26 @@ def train(
 
     amp_on = True if args.fp16 and scaler else False
     output_folder = join(args.root_folder, args.sub_folder)
-    output_train_log = join(output_folder, 'train_log.txt')
-    ouptut_checkpoint = join(output_folder, 'checkpoint')
+    output_train_log = join(output_folder, "train_log.txt")
+    output_checkpoint = join(output_folder, "checkpoint")
 
-
+    # Train and Validation
     for epoch in range(continue_epoch, num_epochs):
-        
+    
         # 1. Train
         print(f'Train: {epoch + 1}/{num_epochs} is on.')
-        train_loss = 0.0
+        train_loss = 0.0        
         model.train()
         for i, (noisy, clean, noise) in enumerate(train_loader):
             
             noisy_mag = noisy['mag'].to(device)
             clean_mag = clean['mag'].to(device)
             noise_mag = noise['mag'].to(device)
-            target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device=device)
+            noisy_mag_log = torch.log(noisy_mag + 1e-8)
+            target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8))
 
             with torch.cuda.amp.autocast(amp_on):
-                output = model(noisy_mag)
+                output = model(noisy_mag_log)
                 loss = criterion(output, target)
             
             if amp_on:
@@ -86,10 +87,11 @@ def train(
                 noisy_mag = noisy['mag'].to(device)
                 clean_mag = clean['mag'].to(device)
                 noise_mag = noise['mag'].to(device)
+                noisy_mag_log = torch.log(noisy_mag + 1e-8).to(device=device)
                 target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device=device)
 
                 with torch.cuda.amp.autocast(amp_on):
-                    output = model(noisy_mag)
+                    output = model(noisy_mag_log)
                     loss = criterion(output, target)
 
                 validation_loss += loss.item()
@@ -115,7 +117,7 @@ def train(
 
         # 5. The parameter is saved.
         name = f"checkpoint_{epoch + 1}.pt"
-        parameter_path = join(ouptut_checkpoint, name)
+        parameter_path = join(output_checkpoint, name)
         if scheduler:
             torch.save({
                 "epoch": epoch + 1,
@@ -146,7 +148,7 @@ def test(
     # data foramt
     mag_angle
 ):
-    
+
     # Some parameter is defined.
     bl_seen = [True, False]
     amp_on = True if args.fp16 else False
@@ -160,7 +162,7 @@ def test(
         model.eval()
         for b_seen in bl_seen:
             total_test_loss = 0
-            total_pesq_score= 0
+            total_pesq_score = 0
             test_loader = seen_test_loader if b_seen else unseen_test_loader
 
             # The batch size for test is just 1. noisy, clean, and target data is just for 1.
@@ -168,13 +170,14 @@ def test(
             for i, (noisy, clean, noise) in enumerate(test_loader):
 
                 # 1. The output is calculated.
-                noisy_mag, clean_mag, noise_mag = noisy['mag'].to(device), clean['mag'], noise['mag']
-                target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device)
+                noisy_mag, clean_mag, noise_mag = noisy['mag'], clean['mag'], noise['mag']
+                noisy_mag_log = torch.log(noisy_mag + 1e-8).to(device=device)
+                target = ((clean_mag ** 2) / (clean_mag ** 2 + noise_mag ** 2 + 1e-8)).to(device=device)
 
                 with torch.cuda.amp.autocast(amp_on):
-                    output = model(noisy_mag)
+                    output = model(noisy_mag_log)
                     test_loss = criterion(output, target).item()
-
+                    
                 total_test_loss += test_loss
 
                 # 2. When the number of data is the multiple of 100, the sound is saved.
@@ -183,20 +186,17 @@ def test(
                     file_name = ("s_result" if b_seen else "u_result") + str(i + 1) + ".wav"
                     
                     output = output.type(torch.DoubleTensor)
-                    noisy_mag = noisy_mag.to('cpu')
 
                     # 3. The amplitude is made from STFT form.
                     # When output is mask, the stft_mag is output(mask) * noisy.
-                    esti_amp = cal_istft(stft_mag=(output * noisy_mag), stft_angle=noisy['angle'], mag_angle=mag_angle).to('cpu')
-                    noisy_amp = cal_istft(stft_mag=noisy_mag, stft_angle=noisy['angle'], mag_angle=mag_angle).to('cpu')
-                    clean_amp = cal_istft(stft_mag=clean_mag, stft_angle=clean['angle'], mag_angle=mag_angle).to('cpu')
+                    esti_amp = cal_istft(stft_mag=(output * noisy_mag), stft_angle=noisy['angle'], mag_angle=mag_angle)
+                    noisy_amp = cal_istft(stft_mag=noisy_mag, stft_angle=noisy['angle'], mag_angle=mag_angle)
+                    clean_amp = cal_istft(stft_mag=clean_mag, stft_angle=clean['angle'], mag_angle=mag_angle)
 
-                    # 4. pesq
                     pesq_score = pesq(sampling_rate, clean_amp.numpy()[0], esti_amp.numpy()[0], 'wb')
                     total_pesq_score += pesq_score
 
-
-                    # 5. The created amplitude is saved by save_result function.
+                    # 4. The created amplitude is saved by save_result function.
                     # If the sound is saved successfully, it returns True.
                     if save_result(output_test_log, result_root_path, file_name, esti_amp, noisy_amp, clean_amp):
                         message = f"{file_name} is created with {test_loss:.6f} loss. pesq: {pesq_score}"
@@ -205,7 +205,7 @@ def test(
                         test_log_file.write(message + '\n')
                         test_log_file.close()
 
-            # 6. The test loss is printed.
+            # 5. The test loss is printed.
             total_test_loss /= test_loader.__len__()
             total_pesq_score /= (test_loader.__len__()//100)
             message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}"
