@@ -63,9 +63,9 @@ def cal_istft(stft=None, stft_mag=None, stft_angle=None, mag_angle=False):
 def save_result(log_file, root_path, file_name, esti_amp, noisy_amp, clean_amp):
     
     try:
-        result_file = join(join(root_path, "result"), file_name)
-        noisy_file = join(join(root_path, "noisy"), file_name)
-        clean_file = join(join(root_path, "clean"), file_name)
+        result_file = join(join(root_path, "result"), file_name['result_name'])
+        noisy_file = join(join(root_path, "noisy"), file_name['noisy_name'])
+        clean_file = join(join(root_path, "clean"), file_name['clean_name'])
 
         mag_factor = (0.9 / torch.max(esti_amp))
         esti_amp *= mag_factor
@@ -148,9 +148,18 @@ class CustomAudioDataset(Dataset):
     # The return data is consisted of three data; noisy, target, clean
     def __getitem__(self, index):
         
-        noisy_file = join(self.noisy_dir, self.file_name.iloc[index, 0])
-        clean_file = join(self.clean_dir, self.file_name.iloc[index, 1])
-        noise_file = join(self.noise_dir, self.file_name.iloc[index, 2])
+        if self.train:
+            noisy_file = join(self.noisy_dir, self.file_name.iloc[index, 0])
+            clean_file = join(self.clean_dir, self.file_name.iloc[index, 1])
+            noise_file = join(self.noise_dir, self.file_name.iloc[index, 2])
+        else:
+            noisy_name = self.file_name.iloc[index, 0]
+            clean_name = self.file_name.iloc[index, 1]
+            noise_name = self.file_name.iloc[index, 2]
+
+            noisy_file = join(self.noisy_dir, noisy_name)
+            clean_file = join(self.clean_dir, clean_name)
+            noise_file = join(self.noise_dir, noise_name)
 
         noisy_amp, _ = torchaudio.load(noisy_file)
         clean_amp, _ = torchaudio.load(clean_file)
@@ -177,16 +186,30 @@ class CustomAudioDataset(Dataset):
             noisy_mag, noisy_angle = cal_stft(noisy_amp, mag_angle=self.mag_angle)
             clean_mag, clean_angle = cal_stft(clean_amp, mag_angle=self.mag_angle)
             noise_mag, noise_angle = cal_stft(noise_amp, mag_angle=self.mag_angle)
-            sample = (
-                {"mag": noisy_mag, "angle": noisy_angle}, 
-                {"mag": clean_mag, "angle": clean_angle},
-                {"mag": noise_mag, "angle": noise_angle}
-            )
+            if self.train:
+                sample = (
+                    {"mag": noisy_mag, "angle": noisy_angle}, 
+                    {"mag": clean_mag, "angle": clean_angle},
+                    {"mag": noise_mag, "angle": noise_angle}
+                )
+            else:
+                sample = (
+                    {"mag": noisy_mag, "angle": noisy_angle, "name": noisy_name}, 
+                    {"mag": clean_mag, "angle": clean_angle, "name": clean_name},
+                    {"mag": noise_mag, "angle": noise_angle, "name": noise_name}
+                )
         else:
             noisy = cal_stft(noisy_amp, mag_angle=self.mag_angle)
             clean = cal_stft(clean_amp, mag_angle=self.mag_angle)
             noise = cal_stft(noise_amp, mag_angle=self.mag_angle)
-            sample = (noisy, clean, noise)
+            if self.train:
+                sample = (noisy, clean, noise)
+            else:
+                sample = (
+                    {"value": noisy, "name": noisy_name},
+                    {"value": clean, "name": clean_name},
+                    {"value": noise, "name": noise_name}
+                )
         
         return sample
 
