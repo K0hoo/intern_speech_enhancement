@@ -11,8 +11,8 @@ from TCN_magnitude.exec_magnitude import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-continue_epoch = 0
-num_epochs = 200
+continue_epoch = 300
+num_epochs = 300
 batch_size = 64
 learning_rate = 0.005
 validation_ratio = 5

@@ -261,7 +261,7 @@ def test(
             total_pesq_score_noisy_per_noise = pesq_score_result
             total_pesq_score_result_per_noise = pesq_score_noisy
             cnt_per_noise = 1
-            noise_idx = noise_name                        
+            noise_idx = noise_name
 
             # 6. The test loss is printed.
             total_test_loss /= test_loader.__len__()

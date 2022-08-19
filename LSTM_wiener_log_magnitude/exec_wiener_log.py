@@ -162,8 +162,20 @@ def test(
         model.eval()
         for b_seen in bl_seen:
             total_test_loss = 0
-            total_pesq_score = 0
-            test_loader = seen_test_loader if b_seen else unseen_test_loader
+            total_pesq_score_noisy = 0
+            total_pesq_score_result = 0
+            total_pesq_score_noisy_per_noise = 0
+            total_pesq_score_result_per_noise = 0
+            cnt_per_noise = 0
+            noise_idx = ''
+            test_log_file = open(output_test_log, 'a', newline='')
+            if b_seen:
+                test_loader = seen_test_loader
+                test_log_file.write("SEEN TEST\n")
+            else:
+                test_loader = unseen_test_loader
+                test_log_file.write("UNSEEN TEST\n")
+            test_log_file.close()
 
             # The batch size for test is just 1. noisy, clean, and target data is just for 1.
             # clean data is just for making result data.
@@ -183,7 +195,16 @@ def test(
                 # 2. When the number of data is the multiple of 100, the sound is saved.
                 if (i + 1) % 100 == 0:
                     result_root_path = output_seen_result if b_seen else output_unseen_result
-                    file_name = ("s_result" if b_seen else "u_result") + str(i + 1) + ".wav"
+                    
+                    noisy_name = noisy_name.split('.')[0]
+                    clean_name = clean_name.split('.')[0]
+                    noise_name = '_'.join((noise_name.split('.')[0].split('_')[:-1]))
+
+                    file_name = {
+                        'result_name': '_'.join((str(i + 1), 'r', noisy_name)) + ".wav",
+                        'noisy_name': '_'.join((str(i + 1), 'n', noisy_name)) + ".wav",
+                        'clean_name': '_'.join((str(i + 1), clean_name)) + ".wav"
+                    }                    
                     
                     output = output.type(torch.DoubleTensor)
 
@@ -193,10 +214,34 @@ def test(
                     noisy_amp = cal_istft(stft_mag=noisy_mag, stft_angle=noisy['angle'], mag_angle=mag_angle)
                     clean_amp = cal_istft(stft_mag=clean_mag, stft_angle=clean['angle'], mag_angle=mag_angle)
 
-                    pesq_score = pesq(sampling_rate, clean_amp.numpy()[0], esti_amp.numpy()[0], 'wb')
-                    total_pesq_score += pesq_score
+                    # 4. pesq
+                    pesq_score_result = pesq(sampling_rate, clean_amp.numpy()[0], esti_amp.numpy()[0], 'wb')
+                    pesq_score_noisy = pesq(sampling_rate, clean_amp.numpy()[0], noisy_amp.numpy()[0], 'wb')
+                    total_pesq_score_result += pesq_score_result
+                    total_pesq_score_noisy += pesq_score_noisy
 
-                    # 4. The created amplitude is saved by save_result function.
+                    if noise_idx == noise_name:
+                        total_pesq_score_result_per_noise += pesq_score_result
+                        total_pesq_score_noisy_per_noise += pesq_score_noisy
+                        cnt_per_noise += 1
+                    elif noise_idx == '':
+                        noise_idx = noise_name
+                        total_pesq_score_result_per_noise += pesq_score_result
+                        total_pesq_score_noisy_per_noise += pesq_score_noisy
+                        cnt_per_noise += 1
+                    else:
+                        message = f"noise: {noise_idx}, pesq {(total_pesq_score_noisy_per_noise/cnt_per_noise):.6f} to {(total_pesq_score_result_per_noise/cnt_per_noise):.6f}"
+                        print(message)
+                        test_log_file = open(output_test_log, 'a', newline='')
+                        test_log_file.write(message + '\n\n')
+                        test_log_file.close()
+                        
+                        total_pesq_score_noisy_per_noise = pesq_score_result
+                        total_pesq_score_result_per_noise = pesq_score_noisy
+                        cnt_per_noise = 1
+                        noise_idx = noise_name                    
+
+                    # 5. The created amplitude is saved by save_result function.
                     # If the sound is saved successfully, it returns True.
                     if save_result(output_test_log, result_root_path, file_name, esti_amp, noisy_amp, clean_amp):
                         message = f"{file_name} is created with {test_loss:.6f} loss. pesq: {pesq_score}"
@@ -205,12 +250,18 @@ def test(
                         test_log_file.write(message + '\n')
                         test_log_file.close()
 
+            total_pesq_score_noisy_per_noise = pesq_score_result
+            total_pesq_score_result_per_noise = pesq_score_noisy
+            cnt_per_noise = 1
+            noise_idx = noise_name
+
             # 5. The test loss is printed.
             total_test_loss /= test_loader.__len__()
-            total_pesq_score /= (test_loader.__len__()//100)
-            message = f"Seen test loss: {total_test_loss}" if b_seen else f"Unseen test loss: {total_test_loss}"
-            message += f" pesq: {total_pesq_score}"
+            total_pesq_score_result /= (test_loader.__len__()//100)
+            total_pesq_score_noisy /= (test_loader.__len__()//100)
+            message = f"Seen test loss: {total_test_loss:.8f}" if b_seen else f"Unseen test loss: {total_test_loss:.8f}"
+            message += f" pesq: {total_pesq_score_noisy:.8f} to {total_pesq_score_result:.8f}"
             print(message)
             test_log_file = open(output_test_log, 'a', newline='')
-            test_log_file.write(message + '\n')
+            test_log_file.write(message + '\n\n')
             test_log_file.close()
