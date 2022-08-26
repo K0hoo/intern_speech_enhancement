@@ -1,9 +1,9 @@
 
 import argparse
 
-import wiener_magnitude.set_wiener as set_wiener
-# import wiener_log_magnitude_pl.wiener_log_pl as wiener_log_pl
-# import wiener_log_magnitude.set_wiener_log as set_wiener_log
+from crm_complex import main as crm_complex
+from wiener_mag import main as wiener_mag
+from wiener_log_mag import main as wiener_log_mag
 
 """
 When you want to test other situations, follow the below step.
@@ -12,12 +12,20 @@ When you want to test other situations, follow the below step.
 3. Adjust some settings on the new exec_<>.py
 4. Adjust soem argument through below parser and the file of main function.
 """
+
+target_dict = {
+    'wiener_mag': wiener_mag,
+    'wiener_log_mag': wiener_log_mag,
+    'crm_complex': crm_complex
+}
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--root_folder', type=str, required=True)
     parser.add_argument('--data_root_folder', type=str, required=True)
-    parser.add_argument('--sub_folder', type=str, required=True)
+    parser.add_argument('--target_type', type=str, required=True)
+    parser.add_argument('--model', type=str, required=True)
     parser.add_argument('--train', action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument('--test', action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument('--fp16', action=argparse.BooleanOptionalAction, default=False)
@@ -26,4 +34,4 @@ if __name__ == "__main__":
     
 
     # execute the main function of your own file!
-    set_wiener.main(args)
+    target_dict[args.target_type].main(args)
