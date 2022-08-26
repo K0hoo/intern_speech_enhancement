@@ -231,7 +231,8 @@ def get_train_dataset(root_folder='\.', transform=None, validation_ratio=5, batc
         batch_size=batch_size, 
         shuffle=True,
         num_workers=num_workers,
-        pin_memory=True
+        pin_memory=True,
+        persistent_workers=True
     )
 
     validation_loader = DataLoader(
@@ -239,7 +240,8 @@ def get_train_dataset(root_folder='\.', transform=None, validation_ratio=5, batc
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
-        pin_memory=True
+        pin_memory=True,
+        persistent_workers=True
     )
 
     return train_loader, validation_loader
