@@ -12,3 +12,5 @@ parameter
 lightning_logs
 ray_test
 runs
+runs_n
+runs_c
