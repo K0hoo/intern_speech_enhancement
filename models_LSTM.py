@@ -88,3 +88,50 @@ class Wiener_LSTM(nn.Module):
         out = self.act3(out)
     
         return out
+
+
+class CRM_LSTM(nn.Module):
+    def __init__(self):
+        super(CRM_LSTM, self).__init__()
+        self.input_size = 514
+        self.hidden_size = 512
+
+        self.lstm1 = nn.LSTM(input_size=self.input_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
+        self.act1 = nn.Sequential(
+            nn.Linear(self.hidden_size * 2, self.hidden_size),
+            nn.ReLU(inplace=False)
+        )
+
+        self.norm1 = nn.GroupNorm(self.hidden_size, self.hidden_size)
+
+        self.lstm2 = nn.LSTM(input_size=self.hidden_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
+        self.act2 = nn.Sequential(
+            nn.Linear(self.hidden_size * 2, self.hidden_size),
+            nn.ReLU(inplace=False)
+        )
+
+        self.norm2 = nn.GroupNorm(self.hidden_size, self.hidden_size)
+
+        self.lstm3 = nn.LSTM(input_size=self.hidden_size, hidden_size=self.hidden_size, bidirectional=True, batch_first=True)
+        self.act3 = nn.Sequential(
+            nn.Linear(self.hidden_size * 2, self.input_size),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        out, _ = self.lstm1(x)
+        out = self.act1(out)
+        out = torch.transpose(out, 1, 2)
+        out = self.norm1(out)
+        out = torch.transpose(out, 1, 2)
+        
+        out, _ = self.lstm2(out)
+        out = self.act2(out)
+        out = torch.transpose(out, 1, 2)
+        out = self.norm2(out)
+        out = torch.transpose(out, 1, 2)
+
+        out, _ = self.lstm3(out)
+        out = self.act3(out)
+    
+        return out

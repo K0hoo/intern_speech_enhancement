@@ -98,6 +98,29 @@ class Wiener_TCN(nn.Module):
         return self.act3(output)
 
 
+class CRM_TCN(nn.Module):
+    def __init__(self, input_size, output_size, num_channels, kernel_size, causal):
+        super(CRM_TCN, self).__init__()
+        self.tcn1 = TemporalConvNet(input_size, num_channels, kernel_size, causal)
+        self.norm1 = nn.GroupNorm(input_size, input_size)
+
+        self.tcn2 = TemporalConvNet(input_size, num_channels, kernel_size, causal)
+        self.norm2 = nn.GroupNorm(input_size, input_size)
+
+        self.tcn3 = TemporalConvNet(input_size, num_channels, kernel_size, causal)
+        self.line3 = nn.Linear(input_size, output_size)
+        self.act3 = nn.Sigmoid()
+
+    def forward(self, x):
+        output = self.tcn1(x.transpose(1, 2))
+        output = self.norm1(output)
+        output = self.tcn2(output)
+        output = self.norm2(output)
+        output = self.tcn3(output).transpose(1, 2)
+        output = self.line3(output)
+        return self.act3(output)
+
+
 class TCN(nn.Module):
     def __init__(self, input_size, output_size, num_channels, kernel_size):
         super(TCN, self).__init__()
