@@ -7,11 +7,11 @@ from torch.utils.tensorboard import SummaryWriter
 from dataset import get_test_dataset, get_train_dataset
 
 from models_TCN import TCN
-from TCN_magnitude.exec_magnitude import train, test
+from magnitude.execute import train, test
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-continue_epoch = 500
+continue_epoch = 0
 num_epochs = 500
 batch_size = 64
 learning_rate = 0.005

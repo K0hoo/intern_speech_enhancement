@@ -2,10 +2,10 @@
 from os.path import join
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch
-import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 from dataset import get_train_dataset, get_test_dataset
 
+from torchmetrics import ScaleInvariantSignalNoiseRatio
 from models_TCN import CRM_TCN
 from crm_complex.execute import train, test
 
@@ -26,7 +26,7 @@ num_channels = [hidden_size, hidden_size, hidden_size, input_size]
 kernel_size = 3
 
 model = CRM_TCN(input_size, input_size, num_channels, kernel_size, causal).to(device)
-criterion = nn.MSELoss()
+criterion = ScaleInvariantSignalNoiseRatio()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
 scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.5, patience=3, cooldown=2)
 scaler = torch.cuda.amp.GradScaler()

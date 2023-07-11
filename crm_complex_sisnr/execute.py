@@ -38,7 +38,7 @@ def train(
         
         # 1. Train
         print(f'Train: {epoch + 1}/{num_epochs} is on.')
-        train_sum, train_index = 0.0
+        train_loss = 0.0
         model.train()
         for i, (noisy, clean, _) in enumerate(train_loader):
             
@@ -50,42 +50,34 @@ def train(
             target_imag = (noisy_real * clean_imag - noisy_imag * clean_real) / (noisy_real ** 2 + noisy_imag ** 2 + 1e-8)
             target = torch.cat((target_real, target_imag), dim=2)
 
-            batch_size = input.size(0)
-            input = input.view(input.size(0) * input.size(1), input.size(2)).to(device).float()
-            target = target.view(target.size(0) * target.size(1), target.size(2)).to(device).float()
+            with torch.cuda.amp.autocast(amp_on):
+                output = model(input)
+                loss = criterion(output, target)
+            
+            if amp_on:
+                scaler.scale(loss).backward()
+                scaler.unscale_(optimizer)
+            else:
+                loss.backward()
 
-            for index in range(0, input.size(0) - batch_size + 1, batch_size):
-                input_item = input[index:index + batch_size, :].squeeze(0)
-                target_item = target[index:index + batch_size, :].squeeze(0)
-                optimizer.zero_grad()
-                with torch.cuda.amp.autocast(amp_on):
-                    output = model(input_item)                    
-                    loss = criterion(source=target_item.unsqueeze(1), estimate_source=output)
-                
-                if amp_on:
-                    scaler.scale(loss).backward()
-                    scaler.unscale_(optimizer)
-                else:
-                    loss.backward()
+            nn.utils.clip_grad_norm_(model.parameters(), args.clip)
 
-                nn.utils.clip_grad_norm_(model.parameters(), args.clip)
+            if amp_on:
+                scaler.step(optimizer)
+                scaler.update()
+            else:
+                optimizer.step()
 
-                if amp_on:
-                    scaler.step(optimizer)
-                    scaler.update()
-                else:
-                    optimizer.step()
-
-                train_sum += loss.item()
-                train_index += 1
+            train_loss += loss.item()
             
             if (i + 1) % 100 == 0:
-                print(f'Train Epoch: {epoch + 1}/{num_epochs}, Batch step: {(i + 1)}/{train_loader.__len__()}, Loss: {train_sum/train_index:.6f}')
+                print(f'Train Epoch: {epoch + 1}/{num_epochs}, Batch step: {(i + 1)}/{train_loader.__len__()}, Loss: {train_loss/100:.6f}')
                 writer.add_scalar(
                     'train loss', 
-                    train_sum/train_index, 
+                    train_loss/100, 
                     epoch * train_loader.__len__() + i + 1
                 )
+                train_loss = 0.0
 
         # 2. Validation
         print(f'Validation: {epoch + 1}/{num_epochs} is on.')
@@ -101,10 +93,6 @@ def train(
                 target_real = (noisy_real * clean_real + noisy_imag * clean_imag) / (noisy_real ** 2 + noisy_imag ** 2 + 1e-8)
                 target_imag = (noisy_real * clean_imag - noisy_imag * clean_real) / (noisy_real ** 2 + noisy_imag ** 2 + 1e-8)
                 target = torch.cat((target_real, target_imag), dim=2)
-
-                batch_size = input.size(0)
-                input = input.view(input.size(0) * input.size(1), input.size(2)).to(device).float()
-                target = target.view(target.size(0) * target.size(1), target.size(2)).to(device).float()
 
                 with torch.cuda.amp.autocast(amp_on):
                     output = model(input)

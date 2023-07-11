@@ -1,0 +1,869 @@
+TEST RESULT R 300 epochs MSE loss
+
+SEEN TEST
+Loss: 0.622183, pesq: 1.451996 to 1.754951, file name: 100_r_DR1_MSTK0_SX394_babble_8.wav
+Loss: 0.432476, pesq: 1.447393 to 1.821278, file name: 200_r_DR2_MABW0_SX44_babble_8.wav
+Loss: 0.731106, pesq: 1.319727 to 2.020182, file name: 300_r_DR2_MPDF0_SX372_babble_8.wav
+Loss: 0.561418, pesq: 1.341728 to 1.521204, file name: 400_r_DR3_FPKT0_SX98_babble_8.wav
+Loss: 0.614329, pesq: 1.545896 to 1.775938, file name: 500_r_DR3_MJJG0_SX373_babble_8.wav
+Loss: 1.361452, pesq: 1.427328 to 1.509768, file name: 600_r_DR3_MTAA0_SX385_babble_8.wav
+Loss: 0.731217, pesq: 1.408378 to 1.454680, file name: 700_r_DR4_FJLM0_SX53_babble_8.wav
+Loss: 0.465789, pesq: 1.608403 to 1.740467, file name: 800_r_DR4_MBNS0_SX50_babble_8.wav
+Loss: 0.483064, pesq: 1.462579 to 1.782416, file name: 900_r_DR4_MPLB0_SX44_babble_8.wav
+Loss: 0.788507, pesq: 1.358175 to 1.527366, file name: 1000_r_DR5_FHES0_SX389_babble_8.wav
+Loss: 0.502904, pesq: 1.392990 to 2.013566, file name: 1100_r_DR5_MCRC0_SX372_babble_8.wav
+Loss: 1.030184, pesq: 1.491414 to 1.773313, file name: 1200_r_DR5_MRPP0_SX374_babble_8.wav
+Loss: 0.485534, pesq: 1.481363 to 2.044108, file name: 1300_r_DR6_MJDH0_SX94_babble_8.wav
+Loss: 1.032659, pesq: 1.460682 to 1.690156, file name: 1400_r_DR7_FMML0_SX50_babble_8.wav
+Loss: 0.495612, pesq: 1.662894 to 1.635301, file name: 1500_r_DR7_MNJM0_SX50_babble_8.wav
+Loss: 0.902974, pesq: 1.329220 to 1.505408, file name: 1600_r_DR8_FMLD0_SX385_babble_8.wav
+noise: babble_8, pesq 1.449385 to 1.723131
+
+Loss: 0.893423, pesq: 1.262342 to 1.556547, file name: 1700_r_DR1_FDAC1_SX394_buccaneer1_8.wav
+Loss: 1.405165, pesq: 1.270414 to 1.735439, file name: 1800_r_DR2_FCMR0_SX385_buccaneer1_8.wav
+Loss: 2.287711, pesq: 1.430242 to 1.595378, file name: 1900_r_DR2_MCCS0_SX389_buccaneer1_8.wav
+Loss: 0.438721, pesq: 1.212455 to 1.550850, file name: 2000_r_DR2_MRCZ0_SX371_buccaneer1_8.wav
+Loss: 0.576354, pesq: 1.367008 to 1.467211, file name: 2100_r_DR3_MBWM0_SX44_buccaneer1_8.wav
+Loss: 0.589721, pesq: 1.282352 to 1.476978, file name: 2200_r_DR3_MJVW0_SX383_buccaneer1_8.wav
+Loss: 0.412954, pesq: 1.305966 to 1.411643, file name: 2300_r_DR3_MTHC0_SX385_buccaneer1_8.wav
+Loss: 0.507502, pesq: 1.201674 to 1.601200, file name: 2400_r_DR4_FLBW0_SX49_buccaneer1_8.wav
+Loss: 0.726500, pesq: 1.224583 to 1.835697, file name: 2500_r_DR4_MDRM0_SX383_buccaneer1_8.wav
+Loss: 0.404416, pesq: 1.379075 to 1.900845, file name: 2600_r_DR4_MRKO0_SX47_buccaneer1_8.wav
+Loss: 1.318918, pesq: 1.309454 to 1.856166, file name: 2700_r_DR5_FJCS0_SX49_buccaneer1_8.wav
+Loss: 0.605300, pesq: 1.242110 to 1.526563, file name: 2800_r_DR5_MDAC2_SX99_buccaneer1_8.wav
+Loss: 1.291692, pesq: 1.261247 to 1.570444, file name: 2900_r_DR5_MRWS1_SX50_buccaneer1_8.wav
+Loss: 0.985241, pesq: 1.263077 to 1.659288, file name: 3000_r_DR6_MPAM1_SX396_buccaneer1_8.wav
+Loss: 0.860185, pesq: 1.194549 to 1.424450, file name: 3100_r_DR7_FTLH0_SX379_buccaneer1_8.wav
+Loss: 0.873577, pesq: 1.324430 to 1.360915, file name: 3200_r_DR7_MPAB0_SX48_buccaneer1_8.wav
+Loss: 0.530380, pesq: 1.205944 to 1.233743, file name: 3300_r_DR8_MDAW1_SX373_buccaneer1_8.wav
+noise: buccaneer1_8, pesq 1.295949 to 1.557009
+
+Loss: 0.483922, pesq: 1.241516 to 1.619933, file name: 3400_r_DR1_FJEM0_SX94_buccaneer2_8.wav
+Loss: 0.612806, pesq: 1.290280 to 1.537171, file name: 3500_r_DR2_FJAS0_SX50_buccaneer2_8.wav
+Loss: 0.328482, pesq: 1.121170 to 1.399129, file name: 3600_r_DR2_MDBB0_SX385_buccaneer2_8.wav
+Loss: 0.445975, pesq: 1.243868 to 1.487741, file name: 3700_r_DR2_MTAS1_SX388_buccaneer2_8.wav
+Loss: 0.521699, pesq: 1.160541 to 1.383559, file name: 3800_r_DR3_MCTW0_SX383_buccaneer2_8.wav
+Loss: 0.750360, pesq: 1.140309 to 1.192405, file name: 3900_r_DR3_MLNT0_SX372_buccaneer2_8.wav
+Loss: 0.567230, pesq: 1.163493 to 1.423359, file name: 4000_r_DR4_FADG0_SX379_buccaneer2_8.wav
+Loss: 0.457582, pesq: 1.275929 to 1.352987, file name: 4100_r_DR4_FMAF0_SX379_buccaneer2_8.wav
+Loss: 0.504571, pesq: 1.179483 to 1.405051, file name: 4200_r_DR4_MJDM1_SX95_buccaneer2_8.wav
+Loss: 0.499794, pesq: 1.188287 to 1.239561, file name: 4300_r_DR4_MTEB0_SX53_buccaneer2_8.wav
+Loss: 0.496051, pesq: 1.161047 to 1.506431, file name: 4400_r_DR5_FMAH0_SX389_buccaneer2_8.wav
+Loss: 0.368468, pesq: 1.306300 to 1.589626, file name: 4500_r_DR5_MDWA0_SX95_buccaneer2_8.wav
+Loss: 0.373468, pesq: 1.199526 to 1.477632, file name: 4600_r_DR6_FDRW0_SX383_buccaneer2_8.wav
+Loss: 0.469058, pesq: 1.251909 to 1.662708, file name: 4700_r_DR6_MRJS0_SX94_buccaneer2_8.wav
+Loss: 0.547946, pesq: 1.255934 to 1.405871, file name: 4800_r_DR7_MDLF0_SX53_buccaneer2_8.wav
+Loss: 0.689322, pesq: 1.262069 to 1.494748, file name: 4900_r_DR7_MRJM4_SX49_buccaneer2_8.wav
+Loss: 0.722810, pesq: 1.200848 to 1.463274, file name: 5000_r_DR8_MJTC0_SX380_buccaneer2_8.wav
+noise: buccaneer2_8, pesq 1.236525 to 1.427222
+
+Loss: 0.259861, pesq: 1.566051 to 2.265729, file name: 5100_r_DR1_MJSW0_SX380_destroyerengine_8.wav
+Loss: 1.611649, pesq: 1.372472 to 1.635260, file name: 5200_r_DR2_FJWB0_SX95_destroyerengine_8.wav
+Loss: 0.492804, pesq: 1.417986 to 1.741703, file name: 5300_r_DR2_MGWT0_SX99_destroyerengine_8.wav
+Loss: 0.452794, pesq: 1.386085 to 1.589058, file name: 5400_r_DR2_MWEW0_SX371_destroyerengine_8.wav
+Loss: 0.453951, pesq: 1.301123 to 1.809443, file name: 5500_r_DR3_MGLB0_SX94_destroyerengine_8.wav
+Loss: 1.078845, pesq: 1.425381 to 1.829600, file name: 5600_r_DR3_MMDH0_SX396_destroyerengine_8.wav
+Loss: 0.548389, pesq: 1.344033 to 1.627515, file name: 5700_r_DR4_FCRH0_SX98_destroyerengine_8.wav
+Loss: 1.107842, pesq: 1.382491 to 1.596025, file name: 5800_r_DR4_FNMR0_SX49_destroyerengine_8.wav
+Loss: 0.548064, pesq: 1.444451 to 1.731077, file name: 5900_r_DR4_MKCL0_SX371_destroyerengine_8.wav
+Loss: 0.444081, pesq: 1.298215 to 1.690721, file name: 6000_r_DR5_FASW0_SX380_destroyerengine_8.wav
+Loss: 0.437818, pesq: 1.192261 to 1.582337, file name: 6100_r_DR5_FUTB0_SX394_destroyerengine_8.wav
+Loss: 0.510906, pesq: 1.411395 to 1.685180, file name: 6200_r_DR5_MFGK0_SX394_destroyerengine_8.wav
+Loss: 0.409685, pesq: 1.336224 to 1.750854, file name: 6300_r_DR6_FMGD0_SX394_destroyerengine_8.wav
+Loss: 0.643932, pesq: 1.274665 to 1.519980, file name: 6400_r_DR7_FDHC0_SX389_destroyerengine_8.wav
+Loss: 0.468162, pesq: 1.436616 to 1.470664, file name: 6500_r_DR7_MERS0_SX389_destroyerengine_8.wav
+Loss: 0.507708, pesq: 1.526400 to 1.949891, file name: 6600_r_DR7_MRPC0_SX43_destroyerengine_8.wav
+Loss: 0.758538, pesq: 1.345488 to 1.743031, file name: 6700_r_DR8_MPAM0_SX379_destroyerengine_8.wav
+noise: destroyerengine_8, pesq 1.421236 to 1.677552
+
+Loss: 0.533890, pesq: 1.571012 to 1.832000, file name: 6800_r_DR1_MRJO0_SX374_destroyerops_8.wav
+Loss: 0.634940, pesq: 1.373776 to 1.604119, file name: 6900_r_DR2_FRAM1_SX370_destroyerops_8.wav
+Loss: 0.568632, pesq: 1.395193 to 1.702273, file name: 7000_r_DR2_MMDB1_SX95_destroyerops_8.wav
+Loss: 1.559730, pesq: 1.383052 to 1.687388, file name: 7100_r_DR3_FCMH0_SX374_destroyerops_8.wav
+Loss: 0.524738, pesq: 1.553616 to 1.635900, file name: 7200_r_DR3_MJBR0_SX371_destroyerops_8.wav
+Loss: 1.498883, pesq: 1.378380 to 1.733536, file name: 7300_r_DR3_MMWH0_SX99_destroyerops_8.wav
+Loss: 0.908601, pesq: 1.336007 to 1.866142, file name: 7400_r_DR4_FEDW0_SX94_destroyerops_8.wav
+Loss: 0.579028, pesq: 1.291275 to 1.740647, file name: 7500_r_DR4_FRNG0_SX95_destroyerops_8.wav
+Loss: 0.547699, pesq: 1.375894 to 1.860527, file name: 7600_r_DR4_MLLL0_SX373_destroyerops_8.wav
+Loss: 0.664447, pesq: 1.397798 to 1.611504, file name: 7700_r_DR5_FCAL1_SX53_destroyerops_8.wav
+Loss: 0.394372, pesq: 1.386545 to 1.694790, file name: 7800_r_DR5_MBPM0_SX47_destroyerops_8.wav
+Loss: 0.606547, pesq: 1.421873 to 1.665194, file name: 7900_r_DR5_MLIH0_SX373_destroyerops_8.wav
+Loss: 0.453768, pesq: 1.424875 to 1.365187, file name: 8000_r_DR6_MDSC0_SX48_destroyerops_8.wav
+Loss: 0.579230, pesq: 1.443744 to 1.581930, file name: 8100_r_DR7_FISB0_SX49_destroyerops_8.wav
+Loss: 0.562276, pesq: 1.346889 to 1.467019, file name: 8200_r_DR7_MKDR0_SX373_destroyerops_8.wav
+Loss: 0.639046, pesq: 1.365881 to 1.501533, file name: 8300_r_DR8_FCMH1_SX53_destroyerops_8.wav
+Loss: 0.832066, pesq: 1.542074 to 1.701040, file name: 8400_r_DR8_MSLB0_SX383_destroyerops_8.wav
+noise: destroyerops_8, pesq 1.426404 to 1.646455
+
+Loss: 0.518033, pesq: 1.508950 to 1.947073, file name: 8500_r_DR1_MSTK0_SX394_f16_8.wav
+Loss: 0.416074, pesq: 1.336717 to 1.727887, file name: 8600_r_DR2_MABW0_SX44_f16_8.wav
+Loss: 0.407531, pesq: 1.276953 to 2.051824, file name: 8700_r_DR2_MPDF0_SX372_f16_8.wav
+Loss: 0.646182, pesq: 1.350361 to 1.721861, file name: 8800_r_DR3_FPKT0_SX98_f16_8.wav
+Loss: 0.529972, pesq: 1.254993 to 1.330835, file name: 8900_r_DR3_MJJG0_SX373_f16_8.wav
+Loss: 0.471240, pesq: 1.446691 to 1.677727, file name: 9000_r_DR3_MTAA0_SX385_f16_8.wav
+Loss: 0.539144, pesq: 1.305183 to 1.411070, file name: 9100_r_DR4_FJLM0_SX53_f16_8.wav
+Loss: 0.565838, pesq: 1.417434 to 1.637656, file name: 9200_r_DR4_MBNS0_SX50_f16_8.wav
+Loss: 0.456772, pesq: 1.255456 to 1.769813, file name: 9300_r_DR4_MPLB0_SX44_f16_8.wav
+Loss: 0.607206, pesq: 1.328536 to 1.554647, file name: 9400_r_DR5_FHES0_SX389_f16_8.wav
+Loss: 0.742299, pesq: 1.288464 to 1.625963, file name: 9500_r_DR5_MCRC0_SX372_f16_8.wav
+Loss: 0.531196, pesq: 1.312934 to 1.309565, file name: 9600_r_DR5_MRPP0_SX374_f16_8.wav
+Loss: 0.473068, pesq: 1.504801 to 2.034388, file name: 9700_r_DR6_MJDH0_SX94_f16_8.wav
+Loss: 0.444005, pesq: 1.436711 to 1.617389, file name: 9800_r_DR7_FMML0_SX50_f16_8.wav
+Loss: 0.527494, pesq: 1.596750 to 1.740685, file name: 9900_r_DR7_MNJM0_SX50_f16_8.wav
+Loss: 0.424116, pesq: 1.382441 to 1.568299, file name: 10000_r_DR8_FMLD0_SX385_f16_8.wav
+noise: f16_8, pesq 1.402594 to 1.643035
+
+Loss: 1.655281, pesq: 1.263802 to 1.512046, file name: 10100_r_DR1_FDAC1_SX394_factory1_8.wav
+Loss: 0.702913, pesq: 1.382009 to 1.741966, file name: 10200_r_DR2_FCMR0_SX385_factory1_8.wav
+Loss: 0.576553, pesq: 1.554173 to 1.731935, file name: 10300_r_DR2_MCCS0_SX389_factory1_8.wav
+Loss: 1.154805, pesq: 1.306695 to 1.604018, file name: 10400_r_DR2_MRCZ0_SX371_factory1_8.wav
+Loss: 0.575426, pesq: 1.594921 to 1.512118, file name: 10500_r_DR3_MBWM0_SX44_factory1_8.wav
+Loss: 0.460730, pesq: 1.354777 to 1.657539, file name: 10600_r_DR3_MJVW0_SX383_factory1_8.wav
+Loss: 0.539166, pesq: 1.456295 to 1.609751, file name: 10700_r_DR3_MTHC0_SX385_factory1_8.wav
+Loss: 1.871473, pesq: 1.272445 to 1.773556, file name: 10800_r_DR4_FLBW0_SX49_factory1_8.wav
+Loss: 0.539260, pesq: 1.336312 to 1.764827, file name: 10900_r_DR4_MDRM0_SX383_factory1_8.wav
+Loss: 0.757442, pesq: 1.516811 to 1.891290, file name: 11000_r_DR4_MRKO0_SX47_factory1_8.wav
+Loss: 0.444772, pesq: 1.387094 to 1.934792, file name: 11100_r_DR5_FJCS0_SX49_factory1_8.wav
+Loss: 0.596174, pesq: 1.326110 to 1.669698, file name: 11200_r_DR5_MDAC2_SX99_factory1_8.wav
+Loss: 0.623170, pesq: 1.377939 to 1.677209, file name: 11300_r_DR5_MRWS1_SX50_factory1_8.wav
+Loss: 0.749874, pesq: 1.382911 to 1.763825, file name: 11400_r_DR6_MPAM1_SX396_factory1_8.wav
+Loss: 0.670734, pesq: 1.301881 to 1.377518, file name: 11500_r_DR7_FTLH0_SX379_factory1_8.wav
+Loss: 0.513891, pesq: 1.499269 to 1.445850, file name: 11600_r_DR7_MPAB0_SX48_factory1_8.wav
+Loss: 0.696734, pesq: 1.320680 to 1.361476, file name: 11700_r_DR8_MDAW1_SX373_factory1_8.wav
+noise: factory1_8, pesq 1.404845 to 1.634186
+
+Loss: 0.554681, pesq: 1.466921 to 1.814134, file name: 11800_r_DR1_FJEM0_SX94_factory2_8.wav
+Loss: 1.248944, pesq: 1.544345 to 1.551681, file name: 11900_r_DR2_FJAS0_SX50_factory2_8.wav
+Loss: 0.697673, pesq: 1.401279 to 1.664478, file name: 12000_r_DR2_MDBB0_SX385_factory2_8.wav
+Loss: 0.527377, pesq: 1.678902 to 1.696370, file name: 12100_r_DR2_MTAS1_SX388_factory2_8.wav
+Loss: 0.617922, pesq: 1.434330 to 1.470877, file name: 12200_r_DR3_MCTW0_SX383_factory2_8.wav
+Loss: 0.615244, pesq: 1.341527 to 1.339563, file name: 12300_r_DR3_MLNT0_SX372_factory2_8.wav
+Loss: 0.876756, pesq: 1.346018 to 1.445594, file name: 12400_r_DR4_FADG0_SX379_factory2_8.wav
+Loss: 0.435854, pesq: 1.533420 to 1.444792, file name: 12500_r_DR4_FMAF0_SX379_factory2_8.wav
+Loss: 0.659392, pesq: 1.561734 to 1.897193, file name: 12600_r_DR4_MJDM1_SX95_factory2_8.wav
+Loss: 0.486659, pesq: 1.416931 to 1.388007, file name: 12700_r_DR4_MTEB0_SX53_factory2_8.wav
+Loss: 0.603418, pesq: 1.309289 to 1.645634, file name: 12800_r_DR5_FMAH0_SX389_factory2_8.wav
+Loss: 0.885643, pesq: 1.637218 to 1.885936, file name: 12900_r_DR5_MDWA0_SX95_factory2_8.wav
+Loss: 0.602900, pesq: 1.469345 to 1.815377, file name: 13000_r_DR6_FDRW0_SX383_factory2_8.wav
+Loss: 0.576787, pesq: 1.593352 to 1.754168, file name: 13100_r_DR6_MRJS0_SX94_factory2_8.wav
+Loss: 0.582291, pesq: 1.622653 to 1.686159, file name: 13200_r_DR7_MDLF0_SX53_factory2_8.wav
+Loss: 0.531991, pesq: 1.738683 to 1.993229, file name: 13300_r_DR7_MRJM4_SX49_factory2_8.wav
+Loss: 0.521775, pesq: 1.468562 to 1.713318, file name: 13400_r_DR8_MJTC0_SX380_factory2_8.wav
+noise: factory2_8, pesq 1.524219 to 1.638782
+
+Loss: 0.275708, pesq: 1.521464 to 2.200594, file name: 13500_r_DR1_MJSW0_SX380_hfchannel_8.wav
+Loss: 2.501388, pesq: 1.318836 to 1.731643, file name: 13600_r_DR2_FJWB0_SX95_hfchannel_8.wav
+Loss: 0.420915, pesq: 1.363301 to 1.702277, file name: 13700_r_DR2_MGWT0_SX99_hfchannel_8.wav
+Loss: 2.344398, pesq: 1.247375 to 1.505975, file name: 13800_r_DR2_MWEW0_SX371_hfchannel_8.wav
+Loss: 0.595167, pesq: 1.356482 to 1.632280, file name: 13900_r_DR3_MGLB0_SX94_hfchannel_8.wav
+Loss: 1.831017, pesq: 1.301879 to 1.583875, file name: 14000_r_DR3_MMDH0_SX396_hfchannel_8.wav
+Loss: 0.420079, pesq: 1.227246 to 1.627966, file name: 14100_r_DR4_FCRH0_SX98_hfchannel_8.wav
+Loss: 3.500165, pesq: 1.270031 to 1.469387, file name: 14200_r_DR4_FNMR0_SX49_hfchannel_8.wav
+Loss: 0.425993, pesq: 1.351846 to 1.680507, file name: 14300_r_DR4_MKCL0_SX371_hfchannel_8.wav
+Loss: 0.379258, pesq: 1.236627 to 1.627011, file name: 14400_r_DR5_FASW0_SX380_hfchannel_8.wav
+Loss: 0.421939, pesq: 1.160820 to 1.566097, file name: 14500_r_DR5_FUTB0_SX394_hfchannel_8.wav
+Loss: 0.432784, pesq: 1.350451 to 1.636365, file name: 14600_r_DR5_MFGK0_SX394_hfchannel_8.wav
+Loss: 0.944109, pesq: 1.219015 to 1.617640, file name: 14700_r_DR6_FMGD0_SX394_hfchannel_8.wav
+Loss: 0.440900, pesq: 1.194412 to 1.563170, file name: 14800_r_DR7_FDHC0_SX389_hfchannel_8.wav
+Loss: 0.526902, pesq: 1.318516 to 1.383743, file name: 14900_r_DR7_MERS0_SX389_hfchannel_8.wav
+Loss: 2.892326, pesq: 1.326325 to 1.754291, file name: 15000_r_DR7_MRPC0_SX43_hfchannel_8.wav
+Loss: 0.417968, pesq: 1.243155 to 1.552833, file name: 15100_r_DR8_MPAM0_SX379_hfchannel_8.wav
+noise: hfchannel_8, pesq 1.334524 to 1.597443
+
+Loss: 0.598262, pesq: 1.518970 to 1.668936, file name: 15200_r_DR1_MRJO0_SX374_leopard_8.wav
+Loss: 0.615422, pesq: 1.423298 to 1.494628, file name: 15300_r_DR2_FRAM1_SX370_leopard_8.wav
+Loss: 0.540540, pesq: 1.541973 to 1.842569, file name: 15400_r_DR2_MMDB1_SX95_leopard_8.wav
+Loss: 0.610417, pesq: 1.397920 to 1.653925, file name: 15500_r_DR3_FCMH0_SX374_leopard_8.wav
+Loss: 0.783563, pesq: 1.693918 to 1.532060, file name: 15600_r_DR3_MJBR0_SX371_leopard_8.wav
+Loss: 1.129699, pesq: 1.472736 to 1.952135, file name: 15700_r_DR3_MMWH0_SX99_leopard_8.wav
+Loss: 0.559844, pesq: 1.389238 to 1.747833, file name: 15800_r_DR4_FEDW0_SX94_leopard_8.wav
+Loss: 0.474193, pesq: 1.272457 to 1.746209, file name: 15900_r_DR4_FRNG0_SX95_leopard_8.wav
+Loss: 0.723558, pesq: 1.447944 to 1.737542, file name: 16000_r_DR4_MLLL0_SX373_leopard_8.wav
+Loss: 0.514175, pesq: 1.421418 to 1.588647, file name: 16100_r_DR5_FCAL1_SX53_leopard_8.wav
+Loss: 1.928103, pesq: 1.465631 to 1.581336, file name: 16200_r_DR5_MBPM0_SX47_leopard_8.wav
+Loss: 0.496682, pesq: 1.499060 to 1.540019, file name: 16300_r_DR5_MLIH0_SX373_leopard_8.wav
+Loss: 1.211655, pesq: 1.764014 to 1.366599, file name: 16400_r_DR6_MDSC0_SX48_leopard_8.wav
+Loss: 0.587469, pesq: 1.456021 to 1.612167, file name: 16500_r_DR7_FISB0_SX49_leopard_8.wav
+Loss: 0.616984, pesq: 1.433167 to 1.448252, file name: 16600_r_DR7_MKDR0_SX373_leopard_8.wav
+Loss: 0.680044, pesq: 1.390532 to 1.464154, file name: 16700_r_DR8_FCMH1_SX53_leopard_8.wav
+Loss: 0.709111, pesq: 1.682550 to 1.714897, file name: 16800_r_DR8_MSLB0_SX383_leopard_8.wav
+noise: leopard_8, pesq 1.495342 to 1.620114
+
+Loss: 0.604921, pesq: 1.829605 to 1.709837, file name: 16900_r_DR1_MSTK0_SX394_m109_8.wav
+Loss: 0.394416, pesq: 1.600011 to 1.720183, file name: 17000_r_DR2_MABW0_SX44_m109_8.wav
+Loss: 0.499552, pesq: 1.474595 to 2.170757, file name: 17100_r_DR2_MPDF0_SX372_m109_8.wav
+Loss: 0.462556, pesq: 1.524435 to 1.779073, file name: 17200_r_DR3_FPKT0_SX98_m109_8.wav
+Loss: 12.259137, pesq: 1.647155 to 1.501185, file name: 17300_r_DR3_MJJG0_SX373_m109_8.wav
+Loss: 0.419944, pesq: 1.574322 to 1.678256, file name: 17400_r_DR3_MTAA0_SX385_m109_8.wav
+Loss: 0.929926, pesq: 1.546915 to 1.520369, file name: 17500_r_DR4_FJLM0_SX53_m109_8.wav
+Loss: 0.663222, pesq: 1.750339 to 1.578531, file name: 17600_r_DR4_MBNS0_SX50_m109_8.wav
+Loss: 0.466085, pesq: 1.547310 to 1.618034, file name: 17700_r_DR4_MPLB0_SX44_m109_8.wav
+Loss: 0.482572, pesq: 1.521164 to 1.550268, file name: 17800_r_DR5_FHES0_SX389_m109_8.wav
+Loss: 0.723224, pesq: 1.550364 to 1.749522, file name: 17900_r_DR5_MCRC0_SX372_m109_8.wav
+Loss: 0.666436, pesq: 1.563590 to 1.452968, file name: 18000_r_DR5_MRPP0_SX374_m109_8.wav
+Loss: 0.406318, pesq: 1.639057 to 2.148539, file name: 18100_r_DR6_MJDH0_SX94_m109_8.wav
+Loss: 0.798164, pesq: 1.600970 to 1.689632, file name: 18200_r_DR7_FMML0_SX50_m109_8.wav
+Loss: 0.657722, pesq: 1.904057 to 1.646708, file name: 18300_r_DR7_MNJM0_SX50_m109_8.wav
+Loss: 0.717187, pesq: 1.569941 to 1.505245, file name: 18400_r_DR8_FMLD0_SX385_m109_8.wav
+noise: m109_8, pesq 1.607754 to 1.696180
+
+Seen test loss: 0.75497836 pesq: 1.39860482 to 1.64104738
+
+UNSEEN TEST
+Loss: 0.373750, pesq: 1.707447 to 1.457504, file name: 100_r_DR1_MSTK0_SX394_machinegun_8.wav
+Loss: 0.401504, pesq: 1.611711 to 1.490899, file name: 200_r_DR2_MABW0_SX44_machinegun_8.wav
+Loss: 0.343208, pesq: 1.363340 to 1.856697, file name: 300_r_DR2_MPDF0_SX372_machinegun_8.wav
+Loss: 0.469633, pesq: 1.474323 to 1.562727, file name: 400_r_DR3_FPKT0_SX98_machinegun_8.wav
+Loss: 1.118363, pesq: 1.496326 to 1.281211, file name: 500_r_DR3_MJJG0_SX373_machinegun_8.wav
+Loss: 0.323185, pesq: 1.732393 to 1.492640, file name: 600_r_DR3_MTAA0_SX385_machinegun_8.wav
+Loss: 0.510412, pesq: 1.441108 to 1.596547, file name: 700_r_DR4_FJLM0_SX53_machinegun_8.wav
+Loss: 0.366300, pesq: 1.724559 to 1.354797, file name: 800_r_DR4_MBNS0_SX50_machinegun_8.wav
+Loss: 0.462140, pesq: 1.535537 to 1.641632, file name: 900_r_DR4_MPLB0_SX44_machinegun_8.wav
+Loss: 0.386559, pesq: 1.578887 to 1.452876, file name: 1000_r_DR5_FHES0_SX389_machinegun_8.wav
+Loss: 0.430361, pesq: 1.628928 to 1.610107, file name: 1100_r_DR5_MCRC0_SX372_machinegun_8.wav
+Loss: 0.322712, pesq: 1.501431 to 1.242591, file name: 1200_r_DR5_MRPP0_SX374_machinegun_8.wav
+Loss: 0.325458, pesq: 2.158980 to 1.914589, file name: 1300_r_DR6_MJDH0_SX94_machinegun_8.wav
+Loss: 0.381810, pesq: 1.449090 to 1.498629, file name: 1400_r_DR7_FMML0_SX50_machinegun_8.wav
+Loss: 0.419685, pesq: 1.906632 to 1.349285, file name: 1500_r_DR7_MNJM0_SX50_machinegun_8.wav
+Loss: 0.374882, pesq: 1.512545 to 1.406062, file name: 1600_r_DR8_FMLD0_SX385_machinegun_8.wav
+noise: machinegun_8, pesq 1.613952 to 1.513049
+
+Loss: 0.483671, pesq: 1.323436 to 1.549306, file name: 1700_r_DR1_FDAC1_SX394_pink_8.wav
+Loss: 0.498641, pesq: 1.366565 to 1.873889, file name: 1800_r_DR2_FCMR0_SX385_pink_8.wav
+Loss: 0.476542, pesq: 1.493966 to 1.767478, file name: 1900_r_DR2_MCCS0_SX389_pink_8.wav
+Loss: 0.533874, pesq: 1.295018 to 1.726510, file name: 2000_r_DR2_MRCZ0_SX371_pink_8.wav
+Loss: 0.560341, pesq: 1.426446 to 1.440758, file name: 2100_r_DR3_MBWM0_SX44_pink_8.wav
+Loss: 0.539524, pesq: 1.350652 to 1.621324, file name: 2200_r_DR3_MJVW0_SX383_pink_8.wav
+Loss: 0.596156, pesq: 1.369155 to 1.535354, file name: 2300_r_DR3_MTHC0_SX385_pink_8.wav
+Loss: 0.772480, pesq: 1.259481 to 1.827595, file name: 2400_r_DR4_FLBW0_SX49_pink_8.wav
+Loss: 0.462819, pesq: 1.287468 to 1.725198, file name: 2500_r_DR4_MDRM0_SX383_pink_8.wav
+Loss: 0.451494, pesq: 1.418300 to 1.790391, file name: 2600_r_DR4_MRKO0_SX47_pink_8.wav
+Loss: 0.905500, pesq: 1.406452 to 1.927040, file name: 2700_r_DR5_FJCS0_SX49_pink_8.wav
+Loss: 0.404291, pesq: 1.321991 to 1.640926, file name: 2800_r_DR5_MDAC2_SX99_pink_8.wav
+Loss: 0.373311, pesq: 1.319594 to 1.726103, file name: 2900_r_DR5_MRWS1_SX50_pink_8.wav
+Loss: 1.007647, pesq: 1.328684 to 1.654939, file name: 3000_r_DR6_MPAM1_SX396_pink_8.wav
+Loss: 1.649327, pesq: 1.266874 to 1.415349, file name: 3100_r_DR7_FTLH0_SX379_pink_8.wav
+Loss: 0.569831, pesq: 1.387247 to 1.430333, file name: 3200_r_DR7_MPAB0_SX48_pink_8.wav
+Loss: 0.429185, pesq: 1.258837 to 1.386043, file name: 3300_r_DR8_MDAW1_SX373_pink_8.wav
+noise: pink_8, pesq 1.359179 to 1.636039
+
+Loss: 0.399988, pesq: 2.293046 to 1.810545, file name: 3400_r_DR1_FJEM0_SX94_volvo_8.wav
+Loss: 0.437442, pesq: 2.173544 to 1.529694, file name: 3500_r_DR2_FJAS0_SX50_volvo_8.wav
+Loss: 0.536971, pesq: 2.306567 to 1.811460, file name: 3600_r_DR2_MDBB0_SX385_volvo_8.wav
+Loss: 0.438044, pesq: 2.259716 to 1.740760, file name: 3700_r_DR2_MTAS1_SX388_volvo_8.wav
+Loss: 0.454965, pesq: 2.007494 to 1.599320, file name: 3800_r_DR3_MCTW0_SX383_volvo_8.wav
+Loss: 0.390401, pesq: 1.624450 to 1.371414, file name: 3900_r_DR3_MLNT0_SX372_volvo_8.wav
+Loss: 0.760613, pesq: 1.994191 to 1.490047, file name: 4000_r_DR4_FADG0_SX379_volvo_8.wav
+Loss: 0.453637, pesq: 2.313043 to 1.458614, file name: 4100_r_DR4_FMAF0_SX379_volvo_8.wav
+Loss: 0.490697, pesq: 2.340976 to 2.031113, file name: 4200_r_DR4_MJDM1_SX95_volvo_8.wav
+Loss: 0.429734, pesq: 1.968987 to 1.382653, file name: 4300_r_DR4_MTEB0_SX53_volvo_8.wav
+Loss: 0.591716, pesq: 2.036630 to 1.731294, file name: 4400_r_DR5_FMAH0_SX389_volvo_8.wav
+Loss: 0.557092, pesq: 2.392182 to 1.915617, file name: 4500_r_DR5_MDWA0_SX95_volvo_8.wav
+Loss: 0.612981, pesq: 2.333255 to 1.807754, file name: 4600_r_DR6_FDRW0_SX383_volvo_8.wav
+Loss: 0.435058, pesq: 2.279238 to 1.929173, file name: 4700_r_DR6_MRJS0_SX94_volvo_8.wav
+Loss: 0.406418, pesq: 2.344987 to 1.667008, file name: 4800_r_DR7_MDLF0_SX53_volvo_8.wav
+Loss: 0.478350, pesq: 2.353317 to 2.047752, file name: 4900_r_DR7_MRJM4_SX49_volvo_8.wav
+Loss: 0.491040, pesq: 1.948772 to 1.928794, file name: 5000_r_DR8_MJTC0_SX380_volvo_8.wav
+noise: volvo_8, pesq 2.146347 to 1.749148
+
+Loss: 0.503408, pesq: 1.436804 to 1.958825, file name: 5100_r_DR1_MJSW0_SX380_white_8.wav
+Loss: 0.536488, pesq: 1.272130 to 1.654128, file name: 5200_r_DR2_FJWB0_SX95_white_8.wav
+Loss: 0.434676, pesq: 1.313184 to 1.714239, file name: 5300_r_DR2_MGWT0_SX99_white_8.wav
+Loss: 0.320005, pesq: 1.193534 to 1.556226, file name: 5400_r_DR2_MWEW0_SX371_white_8.wav
+Loss: 0.444618, pesq: 1.238241 to 1.688551, file name: 5500_r_DR3_MGLB0_SX94_white_8.wav
+Loss: 0.510034, pesq: 1.247179 to 1.631109, file name: 5600_r_DR3_MMDH0_SX396_white_8.wav
+Loss: 0.279121, pesq: 1.200986 to 1.609475, file name: 5700_r_DR4_FCRH0_SX98_white_8.wav
+Loss: 2.207169, pesq: 1.201043 to 1.453424, file name: 5800_r_DR4_FNMR0_SX49_white_8.wav
+Loss: 0.460531, pesq: 1.276797 to 1.728371, file name: 5900_r_DR4_MKCL0_SX371_white_8.wav
+Loss: 1.803907, pesq: 1.191592 to 1.581178, file name: 6000_r_DR5_FASW0_SX380_white_8.wav
+Loss: 0.346792, pesq: 1.154930 to 1.562384, file name: 6100_r_DR5_FUTB0_SX394_white_8.wav
+Loss: 0.678906, pesq: 1.252902 to 1.470820, file name: 6200_r_DR5_MFGK0_SX394_white_8.wav
+Loss: 0.476747, pesq: 1.189960 to 1.553429, file name: 6300_r_DR6_FMGD0_SX394_white_8.wav
+Loss: 0.442055, pesq: 1.171521 to 1.598035, file name: 6400_r_DR7_FDHC0_SX389_white_8.wav
+Loss: 0.477552, pesq: 1.252337 to 1.313674, file name: 6500_r_DR7_MERS0_SX389_white_8.wav
+Loss: 0.944212, pesq: 1.229845 to 1.658776, file name: 6600_r_DR7_MRPC0_SX43_white_8.wav
+Loss: 0.417775, pesq: 1.180570 to 1.512811, file name: 6700_r_DR8_MPAM0_SX379_white_8.wav
+noise: white_8, pesq 1.266210 to 1.571967
+
+Unseen test loss: 0.60188050 pesq: 1.59219934 to 1.62307159
+
+
+TEST RESULT C 300 epochs MSE loss
+
+SEEN TEST
+Loss: 0.622183, pesq: 1.451996 to 1.911458, file name: 100_r_DR1_MSTK0_SX394_babble_8.wav
+Loss: 0.432476, pesq: 1.447393 to 2.022452, file name: 200_r_DR2_MABW0_SX44_babble_8.wav
+Loss: 0.731106, pesq: 1.319727 to 2.170628, file name: 300_r_DR2_MPDF0_SX372_babble_8.wav
+Loss: 0.561418, pesq: 1.341728 to 1.590416, file name: 400_r_DR3_FPKT0_SX98_babble_8.wav
+Loss: 0.614329, pesq: 1.545896 to 1.871774, file name: 500_r_DR3_MJJG0_SX373_babble_8.wav
+Loss: 1.361452, pesq: 1.427328 to 1.644824, file name: 600_r_DR3_MTAA0_SX385_babble_8.wav
+Loss: 0.731217, pesq: 1.408378 to 1.520811, file name: 700_r_DR4_FJLM0_SX53_babble_8.wav
+Loss: 0.465789, pesq: 1.608403 to 1.864916, file name: 800_r_DR4_MBNS0_SX50_babble_8.wav
+Loss: 0.483064, pesq: 1.462579 to 1.876113, file name: 900_r_DR4_MPLB0_SX44_babble_8.wav
+Loss: 0.788507, pesq: 1.358175 to 1.646291, file name: 1000_r_DR5_FHES0_SX389_babble_8.wav
+Loss: 0.502904, pesq: 1.392990 to 2.183671, file name: 1100_r_DR5_MCRC0_SX372_babble_8.wav
+Loss: 1.030184, pesq: 1.491414 to 1.875131, file name: 1200_r_DR5_MRPP0_SX374_babble_8.wav
+Loss: 0.485534, pesq: 1.481363 to 2.339280, file name: 1300_r_DR6_MJDH0_SX94_babble_8.wav
+Loss: 1.032659, pesq: 1.460682 to 1.968508, file name: 1400_r_DR7_FMML0_SX50_babble_8.wav
+Loss: 0.495612, pesq: 1.662894 to 1.846710, file name: 1500_r_DR7_MNJM0_SX50_babble_8.wav
+Loss: 0.902974, pesq: 1.329220 to 1.757381, file name: 1600_r_DR8_FMLD0_SX385_babble_8.wav
+noise: babble_8, pesq 1.449385 to 1.880648
+
+Loss: 0.893423, pesq: 1.262342 to 1.702488, file name: 1700_r_DR1_FDAC1_SX394_buccaneer1_8.wav
+Loss: 1.405165, pesq: 1.270414 to 1.797611, file name: 1800_r_DR2_FCMR0_SX385_buccaneer1_8.wav
+Loss: 2.287711, pesq: 1.430242 to 1.676950, file name: 1900_r_DR2_MCCS0_SX389_buccaneer1_8.wav
+Loss: 0.438721, pesq: 1.212455 to 1.613873, file name: 2000_r_DR2_MRCZ0_SX371_buccaneer1_8.wav
+Loss: 0.576354, pesq: 1.367008 to 1.538530, file name: 2100_r_DR3_MBWM0_SX44_buccaneer1_8.wav
+Loss: 0.589721, pesq: 1.282352 to 1.617596, file name: 2200_r_DR3_MJVW0_SX383_buccaneer1_8.wav
+Loss: 0.412954, pesq: 1.305966 to 1.510215, file name: 2300_r_DR3_MTHC0_SX385_buccaneer1_8.wav
+Loss: 0.507502, pesq: 1.201674 to 1.704791, file name: 2400_r_DR4_FLBW0_SX49_buccaneer1_8.wav
+Loss: 0.726500, pesq: 1.224583 to 2.036850, file name: 2500_r_DR4_MDRM0_SX383_buccaneer1_8.wav
+Loss: 0.404416, pesq: 1.379075 to 1.976455, file name: 2600_r_DR4_MRKO0_SX47_buccaneer1_8.wav
+Loss: 1.318918, pesq: 1.309454 to 2.067934, file name: 2700_r_DR5_FJCS0_SX49_buccaneer1_8.wav
+Loss: 0.605300, pesq: 1.242110 to 1.606441, file name: 2800_r_DR5_MDAC2_SX99_buccaneer1_8.wav
+Loss: 1.291692, pesq: 1.261247 to 1.722476, file name: 2900_r_DR5_MRWS1_SX50_buccaneer1_8.wav
+Loss: 0.985241, pesq: 1.263077 to 1.718872, file name: 3000_r_DR6_MPAM1_SX396_buccaneer1_8.wav
+Loss: 0.860185, pesq: 1.194549 to 1.425040, file name: 3100_r_DR7_FTLH0_SX379_buccaneer1_8.wav
+Loss: 0.873577, pesq: 1.324430 to 1.452657, file name: 3200_r_DR7_MPAB0_SX48_buccaneer1_8.wav
+Loss: 0.530380, pesq: 1.205944 to 1.285525, file name: 3300_r_DR8_MDAW1_SX373_buccaneer1_8.wav
+noise: buccaneer1_8, pesq 1.304533 to 1.647892
+
+Loss: 0.483922, pesq: 1.241516 to 1.697496, file name: 3400_r_DR1_FJEM0_SX94_buccaneer2_8.wav
+Loss: 0.612806, pesq: 1.290280 to 1.681719, file name: 3500_r_DR2_FJAS0_SX50_buccaneer2_8.wav
+Loss: 0.328482, pesq: 1.121170 to 1.435746, file name: 3600_r_DR2_MDBB0_SX385_buccaneer2_8.wav
+Loss: 0.445975, pesq: 1.243868 to 1.573747, file name: 3700_r_DR2_MTAS1_SX388_buccaneer2_8.wav
+Loss: 0.521699, pesq: 1.160541 to 1.416175, file name: 3800_r_DR3_MCTW0_SX383_buccaneer2_8.wav
+Loss: 0.750360, pesq: 1.140309 to 1.211927, file name: 3900_r_DR3_MLNT0_SX372_buccaneer2_8.wav
+Loss: 0.567230, pesq: 1.163493 to 1.448110, file name: 4000_r_DR4_FADG0_SX379_buccaneer2_8.wav
+Loss: 0.457582, pesq: 1.275929 to 1.411707, file name: 4100_r_DR4_FMAF0_SX379_buccaneer2_8.wav
+Loss: 0.504571, pesq: 1.179483 to 1.474584, file name: 4200_r_DR4_MJDM1_SX95_buccaneer2_8.wav
+Loss: 0.499794, pesq: 1.188287 to 1.315889, file name: 4300_r_DR4_MTEB0_SX53_buccaneer2_8.wav
+Loss: 0.496051, pesq: 1.161047 to 1.511833, file name: 4400_r_DR5_FMAH0_SX389_buccaneer2_8.wav
+Loss: 0.368468, pesq: 1.306300 to 1.659598, file name: 4500_r_DR5_MDWA0_SX95_buccaneer2_8.wav
+Loss: 0.373468, pesq: 1.199526 to 1.499714, file name: 4600_r_DR6_FDRW0_SX383_buccaneer2_8.wav
+Loss: 0.469058, pesq: 1.251909 to 1.702671, file name: 4700_r_DR6_MRJS0_SX94_buccaneer2_8.wav
+Loss: 0.547946, pesq: 1.255934 to 1.444895, file name: 4800_r_DR7_MDLF0_SX53_buccaneer2_8.wav
+Loss: 0.689322, pesq: 1.262069 to 1.464026, file name: 4900_r_DR7_MRJM4_SX49_buccaneer2_8.wav
+Loss: 0.722810, pesq: 1.200848 to 1.666140, file name: 5000_r_DR8_MJTC0_SX380_buccaneer2_8.wav
+noise: buccaneer2_8, pesq 1.241088 to 1.480000
+
+Loss: 0.259861, pesq: 1.566051 to 2.425994, file name: 5100_r_DR1_MJSW0_SX380_destroyerengine_8.wav
+Loss: 1.611649, pesq: 1.372472 to 1.837856, file name: 5200_r_DR2_FJWB0_SX95_destroyerengine_8.wav
+Loss: 0.492804, pesq: 1.417986 to 1.999803, file name: 5300_r_DR2_MGWT0_SX99_destroyerengine_8.wav
+Loss: 0.452794, pesq: 1.386085 to 1.762980, file name: 5400_r_DR2_MWEW0_SX371_destroyerengine_8.wav
+Loss: 0.453951, pesq: 1.301123 to 1.990611, file name: 5500_r_DR3_MGLB0_SX94_destroyerengine_8.wav
+Loss: 1.078845, pesq: 1.425381 to 1.976859, file name: 5600_r_DR3_MMDH0_SX396_destroyerengine_8.wav
+Loss: 0.548389, pesq: 1.344033 to 1.791101, file name: 5700_r_DR4_FCRH0_SX98_destroyerengine_8.wav
+Loss: 1.107842, pesq: 1.382491 to 1.738712, file name: 5800_r_DR4_FNMR0_SX49_destroyerengine_8.wav
+Loss: 0.548064, pesq: 1.444451 to 1.904213, file name: 5900_r_DR4_MKCL0_SX371_destroyerengine_8.wav
+Loss: 0.444081, pesq: 1.298215 to 1.834097, file name: 6000_r_DR5_FASW0_SX380_destroyerengine_8.wav
+Loss: 0.437818, pesq: 1.192261 to 1.671619, file name: 6100_r_DR5_FUTB0_SX394_destroyerengine_8.wav
+Loss: 0.510906, pesq: 1.411395 to 1.836477, file name: 6200_r_DR5_MFGK0_SX394_destroyerengine_8.wav
+Loss: 0.409685, pesq: 1.336224 to 2.053795, file name: 6300_r_DR6_FMGD0_SX394_destroyerengine_8.wav
+Loss: 0.643932, pesq: 1.274665 to 1.796456, file name: 6400_r_DR7_FDHC0_SX389_destroyerengine_8.wav
+Loss: 0.468162, pesq: 1.436616 to 1.588134, file name: 6500_r_DR7_MERS0_SX389_destroyerengine_8.wav
+Loss: 0.507708, pesq: 1.526400 to 2.096707, file name: 6600_r_DR7_MRPC0_SX43_destroyerengine_8.wav
+Loss: 0.758538, pesq: 1.345488 to 1.855963, file name: 6700_r_DR8_MPAM0_SX379_destroyerengine_8.wav
+noise: destroyerengine_8, pesq 1.430663 to 1.841261
+
+Loss: 0.533890, pesq: 1.571012 to 1.988660, file name: 6800_r_DR1_MRJO0_SX374_destroyerops_8.wav
+Loss: 0.634940, pesq: 1.373776 to 1.721001, file name: 6900_r_DR2_FRAM1_SX370_destroyerops_8.wav
+Loss: 0.568632, pesq: 1.395193 to 1.971648, file name: 7000_r_DR2_MMDB1_SX95_destroyerops_8.wav
+Loss: 1.559730, pesq: 1.383052 to 1.844914, file name: 7100_r_DR3_FCMH0_SX374_destroyerops_8.wav
+Loss: 0.524738, pesq: 1.553616 to 1.807107, file name: 7200_r_DR3_MJBR0_SX371_destroyerops_8.wav
+Loss: 1.498883, pesq: 1.378380 to 1.831083, file name: 7300_r_DR3_MMWH0_SX99_destroyerops_8.wav
+Loss: 0.908601, pesq: 1.336007 to 1.973427, file name: 7400_r_DR4_FEDW0_SX94_destroyerops_8.wav
+Loss: 0.579028, pesq: 1.291275 to 1.898346, file name: 7500_r_DR4_FRNG0_SX95_destroyerops_8.wav
+Loss: 0.547699, pesq: 1.375894 to 2.047707, file name: 7600_r_DR4_MLLL0_SX373_destroyerops_8.wav
+Loss: 0.664447, pesq: 1.397798 to 1.799092, file name: 7700_r_DR5_FCAL1_SX53_destroyerops_8.wav
+Loss: 0.394372, pesq: 1.386545 to 1.895456, file name: 7800_r_DR5_MBPM0_SX47_destroyerops_8.wav
+Loss: 0.606547, pesq: 1.421873 to 1.816576, file name: 7900_r_DR5_MLIH0_SX373_destroyerops_8.wav
+Loss: 0.453768, pesq: 1.424875 to 1.454776, file name: 8000_r_DR6_MDSC0_SX48_destroyerops_8.wav
+Loss: 0.579230, pesq: 1.443744 to 1.722538, file name: 8100_r_DR7_FISB0_SX49_destroyerops_8.wav
+Loss: 0.562276, pesq: 1.346889 to 1.513188, file name: 8200_r_DR7_MKDR0_SX373_destroyerops_8.wav
+Loss: 0.639046, pesq: 1.365881 to 1.657207, file name: 8300_r_DR8_FCMH1_SX53_destroyerops_8.wav
+Loss: 0.832066, pesq: 1.542074 to 1.932238, file name: 8400_r_DR8_MSLB0_SX383_destroyerops_8.wav
+noise: destroyerops_8, pesq 1.435620 to 1.791607
+
+Loss: 0.518033, pesq: 1.508950 to 2.155363, file name: 8500_r_DR1_MSTK0_SX394_f16_8.wav
+Loss: 0.416074, pesq: 1.336717 to 1.938692, file name: 8600_r_DR2_MABW0_SX44_f16_8.wav
+Loss: 0.407531, pesq: 1.276953 to 2.246635, file name: 8700_r_DR2_MPDF0_SX372_f16_8.wav
+Loss: 0.646182, pesq: 1.350361 to 1.930306, file name: 8800_r_DR3_FPKT0_SX98_f16_8.wav
+Loss: 0.529972, pesq: 1.254993 to 1.377985, file name: 8900_r_DR3_MJJG0_SX373_f16_8.wav
+Loss: 0.471240, pesq: 1.446691 to 1.843050, file name: 9000_r_DR3_MTAA0_SX385_f16_8.wav
+Loss: 0.539144, pesq: 1.305183 to 1.555293, file name: 9100_r_DR4_FJLM0_SX53_f16_8.wav
+Loss: 0.565838, pesq: 1.417434 to 1.588268, file name: 9200_r_DR4_MBNS0_SX50_f16_8.wav
+Loss: 0.456772, pesq: 1.255456 to 1.640656, file name: 9300_r_DR4_MPLB0_SX44_f16_8.wav
+Loss: 0.607206, pesq: 1.328536 to 1.657280, file name: 9400_r_DR5_FHES0_SX389_f16_8.wav
+Loss: 0.742299, pesq: 1.288464 to 1.909920, file name: 9500_r_DR5_MCRC0_SX372_f16_8.wav
+Loss: 0.531196, pesq: 1.312934 to 1.389174, file name: 9600_r_DR5_MRPP0_SX374_f16_8.wav
+Loss: 0.473068, pesq: 1.504801 to 2.244530, file name: 9700_r_DR6_MJDH0_SX94_f16_8.wav
+Loss: 0.444005, pesq: 1.436711 to 1.910495, file name: 9800_r_DR7_FMML0_SX50_f16_8.wav
+Loss: 0.527494, pesq: 1.596750 to 1.898453, file name: 9900_r_DR7_MNJM0_SX50_f16_8.wav
+Loss: 0.424116, pesq: 1.382441 to 1.765904, file name: 10000_r_DR8_FMLD0_SX385_f16_8.wav
+noise: f16_8, pesq 1.415612 to 1.775349
+
+Loss: 1.655281, pesq: 1.263802 to 1.677538, file name: 10100_r_DR1_FDAC1_SX394_factory1_8.wav
+Loss: 0.702913, pesq: 1.382009 to 1.842324, file name: 10200_r_DR2_FCMR0_SX385_factory1_8.wav
+Loss: 0.576553, pesq: 1.554173 to 1.852273, file name: 10300_r_DR2_MCCS0_SX389_factory1_8.wav
+Loss: 1.154805, pesq: 1.306695 to 1.717324, file name: 10400_r_DR2_MRCZ0_SX371_factory1_8.wav
+Loss: 0.575426, pesq: 1.594921 to 1.756072, file name: 10500_r_DR3_MBWM0_SX44_factory1_8.wav
+Loss: 0.460730, pesq: 1.354777 to 1.874404, file name: 10600_r_DR3_MJVW0_SX383_factory1_8.wav
+Loss: 0.539166, pesq: 1.456295 to 1.830650, file name: 10700_r_DR3_MTHC0_SX385_factory1_8.wav
+Loss: 1.871473, pesq: 1.272445 to 2.002238, file name: 10800_r_DR4_FLBW0_SX49_factory1_8.wav
+Loss: 0.539260, pesq: 1.336312 to 2.043835, file name: 10900_r_DR4_MDRM0_SX383_factory1_8.wav
+Loss: 0.757442, pesq: 1.516811 to 1.992986, file name: 11000_r_DR4_MRKO0_SX47_factory1_8.wav
+Loss: 0.444772, pesq: 1.387094 to 2.338170, file name: 11100_r_DR5_FJCS0_SX49_factory1_8.wav
+Loss: 0.596174, pesq: 1.326110 to 1.830734, file name: 11200_r_DR5_MDAC2_SX99_factory1_8.wav
+Loss: 0.623170, pesq: 1.377939 to 1.881706, file name: 11300_r_DR5_MRWS1_SX50_factory1_8.wav
+Loss: 0.749874, pesq: 1.382911 to 1.888467, file name: 11400_r_DR6_MPAM1_SX396_factory1_8.wav
+Loss: 0.670734, pesq: 1.301881 to 1.385161, file name: 11500_r_DR7_FTLH0_SX379_factory1_8.wav
+Loss: 0.513891, pesq: 1.499269 to 1.544144, file name: 11600_r_DR7_MPAB0_SX48_factory1_8.wav
+Loss: 0.696734, pesq: 1.320680 to 1.397484, file name: 11700_r_DR8_MDAW1_SX373_factory1_8.wav
+noise: factory1_8, pesq 1.414580 to 1.790693
+
+Loss: 0.554681, pesq: 1.466921 to 2.185870, file name: 11800_r_DR1_FJEM0_SX94_factory2_8.wav
+Loss: 1.248944, pesq: 1.544345 to 2.010530, file name: 11900_r_DR2_FJAS0_SX50_factory2_8.wav
+Loss: 0.697673, pesq: 1.401279 to 1.806082, file name: 12000_r_DR2_MDBB0_SX385_factory2_8.wav
+Loss: 0.527377, pesq: 1.678902 to 2.006631, file name: 12100_r_DR2_MTAS1_SX388_factory2_8.wav
+Loss: 0.617922, pesq: 1.434330 to 1.570295, file name: 12200_r_DR3_MCTW0_SX383_factory2_8.wav
+Loss: 0.615244, pesq: 1.341527 to 1.407357, file name: 12300_r_DR3_MLNT0_SX372_factory2_8.wav
+Loss: 0.876756, pesq: 1.346018 to 1.666440, file name: 12400_r_DR4_FADG0_SX379_factory2_8.wav
+Loss: 0.435854, pesq: 1.533420 to 1.639348, file name: 12500_r_DR4_FMAF0_SX379_factory2_8.wav
+Loss: 0.659392, pesq: 1.561734 to 2.121020, file name: 12600_r_DR4_MJDM1_SX95_factory2_8.wav
+Loss: 0.486659, pesq: 1.416931 to 1.501640, file name: 12700_r_DR4_MTEB0_SX53_factory2_8.wav
+Loss: 0.603418, pesq: 1.309289 to 1.797380, file name: 12800_r_DR5_FMAH0_SX389_factory2_8.wav
+Loss: 0.885643, pesq: 1.637218 to 2.214899, file name: 12900_r_DR5_MDWA0_SX95_factory2_8.wav
+Loss: 0.602900, pesq: 1.469345 to 2.112117, file name: 13000_r_DR6_FDRW0_SX383_factory2_8.wav
+Loss: 0.576787, pesq: 1.593352 to 2.165104, file name: 13100_r_DR6_MRJS0_SX94_factory2_8.wav
+Loss: 0.582291, pesq: 1.622653 to 1.964468, file name: 13200_r_DR7_MDLF0_SX53_factory2_8.wav
+Loss: 0.531991, pesq: 1.738683 to 2.040286, file name: 13300_r_DR7_MRJM4_SX49_factory2_8.wav
+Loss: 0.521775, pesq: 1.468562 to 1.835849, file name: 13400_r_DR8_MJTC0_SX380_factory2_8.wav
+noise: factory2_8, pesq 1.546086 to 1.842727
+
+Loss: 0.275708, pesq: 1.521464 to 2.450743, file name: 13500_r_DR1_MJSW0_SX380_hfchannel_8.wav
+Loss: 2.501388, pesq: 1.318836 to 1.924290, file name: 13600_r_DR2_FJWB0_SX95_hfchannel_8.wav
+Loss: 0.420915, pesq: 1.363301 to 1.911114, file name: 13700_r_DR2_MGWT0_SX99_hfchannel_8.wav
+Loss: 2.344398, pesq: 1.247375 to 1.588804, file name: 13800_r_DR2_MWEW0_SX371_hfchannel_8.wav
+Loss: 0.595167, pesq: 1.356482 to 1.712511, file name: 13900_r_DR3_MGLB0_SX94_hfchannel_8.wav
+Loss: 1.831017, pesq: 1.301879 to 1.703408, file name: 14000_r_DR3_MMDH0_SX396_hfchannel_8.wav
+Loss: 0.420079, pesq: 1.227246 to 1.731211, file name: 14100_r_DR4_FCRH0_SX98_hfchannel_8.wav
+Loss: 3.500165, pesq: 1.270031 to 1.592503, file name: 14200_r_DR4_FNMR0_SX49_hfchannel_8.wav
+Loss: 0.425993, pesq: 1.351846 to 1.819216, file name: 14300_r_DR4_MKCL0_SX371_hfchannel_8.wav
+Loss: 0.379258, pesq: 1.236627 to 1.770206, file name: 14400_r_DR5_FASW0_SX380_hfchannel_8.wav
+Loss: 0.421939, pesq: 1.160820 to 1.714279, file name: 14500_r_DR5_FUTB0_SX394_hfchannel_8.wav
+Loss: 0.432784, pesq: 1.350451 to 1.781730, file name: 14600_r_DR5_MFGK0_SX394_hfchannel_8.wav
+Loss: 0.944109, pesq: 1.219015 to 1.775967, file name: 14700_r_DR6_FMGD0_SX394_hfchannel_8.wav
+Loss: 0.440900, pesq: 1.194412 to 1.786635, file name: 14800_r_DR7_FDHC0_SX389_hfchannel_8.wav
+Loss: 0.526902, pesq: 1.318516 to 1.470237, file name: 14900_r_DR7_MERS0_SX389_hfchannel_8.wav
+Loss: 2.892326, pesq: 1.326325 to 1.809488, file name: 15000_r_DR7_MRPC0_SX43_hfchannel_8.wav
+Loss: 0.417968, pesq: 1.243155 to 1.608154, file name: 15100_r_DR8_MPAM0_SX379_hfchannel_8.wav
+noise: hfchannel_8, pesq 1.349239 to 1.718895
+
+Loss: 0.598262, pesq: 1.518970 to 1.835792, file name: 15200_r_DR1_MRJO0_SX374_leopard_8.wav
+Loss: 0.615422, pesq: 1.423298 to 1.656923, file name: 15300_r_DR2_FRAM1_SX370_leopard_8.wav
+Loss: 0.540540, pesq: 1.541973 to 2.138356, file name: 15400_r_DR2_MMDB1_SX95_leopard_8.wav
+Loss: 0.610417, pesq: 1.397920 to 1.908889, file name: 15500_r_DR3_FCMH0_SX374_leopard_8.wav
+Loss: 0.783563, pesq: 1.693918 to 1.853231, file name: 15600_r_DR3_MJBR0_SX371_leopard_8.wav
+Loss: 1.129699, pesq: 1.472736 to 1.953455, file name: 15700_r_DR3_MMWH0_SX99_leopard_8.wav
+Loss: 0.559844, pesq: 1.389238 to 1.968219, file name: 15800_r_DR4_FEDW0_SX94_leopard_8.wav
+Loss: 0.474193, pesq: 1.272457 to 2.040598, file name: 15900_r_DR4_FRNG0_SX95_leopard_8.wav
+Loss: 0.723558, pesq: 1.447944 to 2.114933, file name: 16000_r_DR4_MLLL0_SX373_leopard_8.wav
+Loss: 0.514175, pesq: 1.421418 to 1.949160, file name: 16100_r_DR5_FCAL1_SX53_leopard_8.wav
+Loss: 1.928103, pesq: 1.465631 to 1.768202, file name: 16200_r_DR5_MBPM0_SX47_leopard_8.wav
+Loss: 0.496682, pesq: 1.499060 to 1.810721, file name: 16300_r_DR5_MLIH0_SX373_leopard_8.wav
+Loss: 1.211655, pesq: 1.764014 to 1.480745, file name: 16400_r_DR6_MDSC0_SX48_leopard_8.wav
+Loss: 0.587469, pesq: 1.456021 to 1.917964, file name: 16500_r_DR7_FISB0_SX49_leopard_8.wav
+Loss: 0.616984, pesq: 1.433167 to 1.562532, file name: 16600_r_DR7_MKDR0_SX373_leopard_8.wav
+Loss: 0.680044, pesq: 1.390532 to 1.634063, file name: 16700_r_DR8_FCMH1_SX53_leopard_8.wav
+Loss: 0.709111, pesq: 1.682550 to 1.887117, file name: 16800_r_DR8_MSLB0_SX383_leopard_8.wav
+noise: leopard_8, pesq 1.505157 to 1.833181
+
+Loss: 0.604921, pesq: 1.829605 to 1.893114, file name: 16900_r_DR1_MSTK0_SX394_m109_8.wav
+Loss: 0.394416, pesq: 1.600011 to 1.982311, file name: 17000_r_DR2_MABW0_SX44_m109_8.wav
+Loss: 0.499552, pesq: 1.474595 to 2.508867, file name: 17100_r_DR2_MPDF0_SX372_m109_8.wav
+Loss: 0.462556, pesq: 1.524435 to 1.982388, file name: 17200_r_DR3_FPKT0_SX98_m109_8.wav
+Loss: 12.259137, pesq: 1.647155 to 1.635663, file name: 17300_r_DR3_MJJG0_SX373_m109_8.wav
+Loss: 0.419944, pesq: 1.574322 to 1.849622, file name: 17400_r_DR3_MTAA0_SX385_m109_8.wav
+Loss: 0.929926, pesq: 1.546915 to 1.789601, file name: 17500_r_DR4_FJLM0_SX53_m109_8.wav
+Loss: 0.663222, pesq: 1.750339 to 1.646135, file name: 17600_r_DR4_MBNS0_SX50_m109_8.wav
+Loss: 0.466085, pesq: 1.547310 to 1.773267, file name: 17700_r_DR4_MPLB0_SX44_m109_8.wav
+Loss: 0.482572, pesq: 1.521164 to 1.741564, file name: 17800_r_DR5_FHES0_SX389_m109_8.wav
+Loss: 0.723224, pesq: 1.550364 to 1.960652, file name: 17900_r_DR5_MCRC0_SX372_m109_8.wav
+Loss: 0.666436, pesq: 1.563590 to 1.596963, file name: 18000_r_DR5_MRPP0_SX374_m109_8.wav
+Loss: 0.406318, pesq: 1.639057 to 2.538568, file name: 18100_r_DR6_MJDH0_SX94_m109_8.wav
+Loss: 0.798164, pesq: 1.600970 to 2.153027, file name: 18200_r_DR7_FMML0_SX50_m109_8.wav
+Loss: 0.657722, pesq: 1.904057 to 1.904066, file name: 18300_r_DR7_MNJM0_SX50_m109_8.wav
+Loss: 0.717187, pesq: 1.569941 to 1.832448, file name: 18400_r_DR8_FMLD0_SX385_m109_8.wav
+noise: m109_8, pesq 1.619209 to 1.920297
+
+Seen test loss: 0.75497836 pesq: 1.39860482 to 1.80200799
+
+UNSEEN TEST
+Loss: 0.373750, pesq: 1.707447 to 1.541830, file name: 100_r_DR1_MSTK0_SX394_machinegun_8.wav
+Loss: 0.401504, pesq: 1.611711 to 1.597716, file name: 200_r_DR2_MABW0_SX44_machinegun_8.wav
+Loss: 0.343208, pesq: 1.363340 to 2.136817, file name: 300_r_DR2_MPDF0_SX372_machinegun_8.wav
+Loss: 0.469633, pesq: 1.474323 to 1.780364, file name: 400_r_DR3_FPKT0_SX98_machinegun_8.wav
+Loss: 1.118363, pesq: 1.496326 to 1.334331, file name: 500_r_DR3_MJJG0_SX373_machinegun_8.wav
+Loss: 0.323185, pesq: 1.732393 to 1.712643, file name: 600_r_DR3_MTAA0_SX385_machinegun_8.wav
+Loss: 0.510412, pesq: 1.441108 to 1.809313, file name: 700_r_DR4_FJLM0_SX53_machinegun_8.wav
+Loss: 0.366300, pesq: 1.724559 to 1.514008, file name: 800_r_DR4_MBNS0_SX50_machinegun_8.wav
+Loss: 0.462140, pesq: 1.535537 to 1.760773, file name: 900_r_DR4_MPLB0_SX44_machinegun_8.wav
+Loss: 0.386559, pesq: 1.578887 to 1.672453, file name: 1000_r_DR5_FHES0_SX389_machinegun_8.wav
+Loss: 0.430361, pesq: 1.628928 to 1.803186, file name: 1100_r_DR5_MCRC0_SX372_machinegun_8.wav
+Loss: 0.322712, pesq: 1.501431 to 1.285671, file name: 1200_r_DR5_MRPP0_SX374_machinegun_8.wav
+Loss: 0.325458, pesq: 2.158980 to 2.160410, file name: 1300_r_DR6_MJDH0_SX94_machinegun_8.wav
+Loss: 0.381810, pesq: 1.449090 to 1.728021, file name: 1400_r_DR7_FMML0_SX50_machinegun_8.wav
+Loss: 0.419685, pesq: 1.906632 to 1.409092, file name: 1500_r_DR7_MNJM0_SX50_machinegun_8.wav
+Loss: 0.374882, pesq: 1.512545 to 1.589589, file name: 1600_r_DR8_FMLD0_SX385_machinegun_8.wav
+noise: machinegun_8, pesq 1.613952 to 1.677264
+
+Loss: 0.483671, pesq: 1.323436 to 1.757014, file name: 1700_r_DR1_FDAC1_SX394_pink_8.wav
+Loss: 0.498641, pesq: 1.366565 to 1.943632, file name: 1800_r_DR2_FCMR0_SX385_pink_8.wav
+Loss: 0.476542, pesq: 1.493966 to 1.851675, file name: 1900_r_DR2_MCCS0_SX389_pink_8.wav
+Loss: 0.533874, pesq: 1.295018 to 1.808460, file name: 2000_r_DR2_MRCZ0_SX371_pink_8.wav
+Loss: 0.560341, pesq: 1.426446 to 1.523736, file name: 2100_r_DR3_MBWM0_SX44_pink_8.wav
+Loss: 0.539524, pesq: 1.350652 to 1.735218, file name: 2200_r_DR3_MJVW0_SX383_pink_8.wav
+Loss: 0.596156, pesq: 1.369155 to 1.714830, file name: 2300_r_DR3_MTHC0_SX385_pink_8.wav
+Loss: 0.772480, pesq: 1.259481 to 2.031144, file name: 2400_r_DR4_FLBW0_SX49_pink_8.wav
+Loss: 0.462819, pesq: 1.287468 to 1.865768, file name: 2500_r_DR4_MDRM0_SX383_pink_8.wav
+Loss: 0.451494, pesq: 1.418300 to 1.849287, file name: 2600_r_DR4_MRKO0_SX47_pink_8.wav
+Loss: 0.905500, pesq: 1.406452 to 2.110086, file name: 2700_r_DR5_FJCS0_SX49_pink_8.wav
+Loss: 0.404291, pesq: 1.321991 to 1.764008, file name: 2800_r_DR5_MDAC2_SX99_pink_8.wav
+Loss: 0.373311, pesq: 1.319594 to 1.910975, file name: 2900_r_DR5_MRWS1_SX50_pink_8.wav
+Loss: 1.007647, pesq: 1.328684 to 1.743542, file name: 3000_r_DR6_MPAM1_SX396_pink_8.wav
+Loss: 1.649327, pesq: 1.266874 to 1.415590, file name: 3100_r_DR7_FTLH0_SX379_pink_8.wav
+Loss: 0.569831, pesq: 1.387247 to 1.522439, file name: 3200_r_DR7_MPAB0_SX48_pink_8.wav
+Loss: 0.429185, pesq: 1.258837 to 1.538387, file name: 3300_r_DR8_MDAW1_SX373_pink_8.wav
+noise: pink_8, pesq 1.371397 to 1.744248
+
+Loss: 0.399988, pesq: 2.293046 to 2.486873, file name: 3400_r_DR1_FJEM0_SX94_volvo_8.wav
+Loss: 0.437442, pesq: 2.173544 to 2.138382, file name: 3500_r_DR2_FJAS0_SX50_volvo_8.wav
+Loss: 0.536971, pesq: 2.306567 to 2.494172, file name: 3600_r_DR2_MDBB0_SX385_volvo_8.wav
+Loss: 0.438044, pesq: 2.259716 to 2.160878, file name: 3700_r_DR2_MTAS1_SX388_volvo_8.wav
+Loss: 0.454965, pesq: 2.007494 to 1.971690, file name: 3800_r_DR3_MCTW0_SX383_volvo_8.wav
+Loss: 0.390401, pesq: 1.624450 to 1.633787, file name: 3900_r_DR3_MLNT0_SX372_volvo_8.wav
+Loss: 0.760613, pesq: 1.994191 to 1.973814, file name: 4000_r_DR4_FADG0_SX379_volvo_8.wav
+Loss: 0.453637, pesq: 2.313043 to 1.724803, file name: 4100_r_DR4_FMAF0_SX379_volvo_8.wav
+Loss: 0.490697, pesq: 2.340976 to 2.586874, file name: 4200_r_DR4_MJDM1_SX95_volvo_8.wav
+Loss: 0.429734, pesq: 1.968987 to 1.919847, file name: 4300_r_DR4_MTEB0_SX53_volvo_8.wav
+Loss: 0.591716, pesq: 2.036630 to 2.192738, file name: 4400_r_DR5_FMAH0_SX389_volvo_8.wav
+Loss: 0.557092, pesq: 2.392182 to 2.335755, file name: 4500_r_DR5_MDWA0_SX95_volvo_8.wav
+Loss: 0.612981, pesq: 2.333255 to 2.414089, file name: 4600_r_DR6_FDRW0_SX383_volvo_8.wav
+Loss: 0.435058, pesq: 2.279238 to 2.497800, file name: 4700_r_DR6_MRJS0_SX94_volvo_8.wav
+Loss: 0.406418, pesq: 2.344987 to 2.052918, file name: 4800_r_DR7_MDLF0_SX53_volvo_8.wav
+Loss: 0.478350, pesq: 2.353317 to 2.360816, file name: 4900_r_DR7_MRJM4_SX49_volvo_8.wav
+Loss: 0.491040, pesq: 1.948772 to 2.261985, file name: 5000_r_DR8_MJTC0_SX380_volvo_8.wav
+noise: volvo_8, pesq 2.186131 to 2.177258
+
+Loss: 0.503408, pesq: 1.436804 to 2.019650, file name: 5100_r_DR1_MJSW0_SX380_white_8.wav
+Loss: 0.536488, pesq: 1.272130 to 1.739895, file name: 5200_r_DR2_FJWB0_SX95_white_8.wav
+Loss: 0.434676, pesq: 1.313184 to 1.800613, file name: 5300_r_DR2_MGWT0_SX99_white_8.wav
+Loss: 0.320005, pesq: 1.193534 to 1.564629, file name: 5400_r_DR2_MWEW0_SX371_white_8.wav
+Loss: 0.444618, pesq: 1.238241 to 1.725856, file name: 5500_r_DR3_MGLB0_SX94_white_8.wav
+Loss: 0.510034, pesq: 1.247179 to 1.719668, file name: 5600_r_DR3_MMDH0_SX396_white_8.wav
+Loss: 0.279121, pesq: 1.200986 to 1.723598, file name: 5700_r_DR4_FCRH0_SX98_white_8.wav
+Loss: 2.207169, pesq: 1.201043 to 1.493596, file name: 5800_r_DR4_FNMR0_SX49_white_8.wav
+Loss: 0.460531, pesq: 1.276797 to 1.856923, file name: 5900_r_DR4_MKCL0_SX371_white_8.wav
+Loss: 1.803907, pesq: 1.191592 to 1.637625, file name: 6000_r_DR5_FASW0_SX380_white_8.wav
+Loss: 0.346792, pesq: 1.154930 to 1.677138, file name: 6100_r_DR5_FUTB0_SX394_white_8.wav
+Loss: 0.678906, pesq: 1.252902 to 1.504998, file name: 6200_r_DR5_MFGK0_SX394_white_8.wav
+Loss: 0.476747, pesq: 1.189960 to 1.594080, file name: 6300_r_DR6_FMGD0_SX394_white_8.wav
+Loss: 0.442055, pesq: 1.171521 to 1.775867, file name: 6400_r_DR7_FDHC0_SX389_white_8.wav
+Loss: 0.477552, pesq: 1.252337 to 1.351307, file name: 6500_r_DR7_MERS0_SX389_white_8.wav
+Loss: 0.944212, pesq: 1.229845 to 1.698821, file name: 6600_r_DR7_MRPC0_SX43_white_8.wav
+Loss: 0.417775, pesq: 1.180570 to 1.556234, file name: 6700_r_DR8_MPAM0_SX379_white_8.wav
+noise: white_8, pesq 1.269788 to 1.638686
+
+Unseen test loss: 0.60188050 pesq: 1.59219934 to 1.82939896
+
+
+TEST RESULT E 300 epochs MSE loss
+
+SEEN TEST
+Loss: 0.622183, pesq: 1.451996 to 1.911458, file name: 100_r_DR1_MSTK0_SX394_babble_8.wav
+Loss: 0.432476, pesq: 1.447393 to 2.022452, file name: 200_r_DR2_MABW0_SX44_babble_8.wav
+Loss: 0.731106, pesq: 1.319727 to 2.170627, file name: 300_r_DR2_MPDF0_SX372_babble_8.wav
+Loss: 0.561418, pesq: 1.341728 to 1.590418, file name: 400_r_DR3_FPKT0_SX98_babble_8.wav
+Loss: 0.614329, pesq: 1.545896 to 1.871775, file name: 500_r_DR3_MJJG0_SX373_babble_8.wav
+Loss: 1.361452, pesq: 1.427328 to 1.644824, file name: 600_r_DR3_MTAA0_SX385_babble_8.wav
+Loss: 0.731217, pesq: 1.408378 to 1.520811, file name: 700_r_DR4_FJLM0_SX53_babble_8.wav
+Loss: 0.465789, pesq: 1.608403 to 1.864916, file name: 800_r_DR4_MBNS0_SX50_babble_8.wav
+Loss: 0.483064, pesq: 1.462579 to 1.876112, file name: 900_r_DR4_MPLB0_SX44_babble_8.wav
+Loss: 0.788507, pesq: 1.358175 to 1.646293, file name: 1000_r_DR5_FHES0_SX389_babble_8.wav
+Loss: 0.502904, pesq: 1.392990 to 2.183671, file name: 1100_r_DR5_MCRC0_SX372_babble_8.wav
+Loss: 1.030184, pesq: 1.491414 to 1.875130, file name: 1200_r_DR5_MRPP0_SX374_babble_8.wav
+Loss: 0.485534, pesq: 1.481363 to 2.339281, file name: 1300_r_DR6_MJDH0_SX94_babble_8.wav
+Loss: 1.032659, pesq: 1.460682 to 1.968507, file name: 1400_r_DR7_FMML0_SX50_babble_8.wav
+Loss: 0.495612, pesq: 1.662894 to 1.846711, file name: 1500_r_DR7_MNJM0_SX50_babble_8.wav
+Loss: 0.902974, pesq: 1.329220 to 1.757381, file name: 1600_r_DR8_FMLD0_SX385_babble_8.wav
+noise: babble_8, pesq 1.449385 to 1.880648
+
+Loss: 0.893423, pesq: 1.262342 to 1.702488, file name: 1700_r_DR1_FDAC1_SX394_buccaneer1_8.wav
+Loss: 1.405165, pesq: 1.270414 to 1.797608, file name: 1800_r_DR2_FCMR0_SX385_buccaneer1_8.wav
+Loss: 2.287711, pesq: 1.430242 to 1.676950, file name: 1900_r_DR2_MCCS0_SX389_buccaneer1_8.wav
+Loss: 0.438721, pesq: 1.212455 to 1.613873, file name: 2000_r_DR2_MRCZ0_SX371_buccaneer1_8.wav
+Loss: 0.576354, pesq: 1.367008 to 1.538530, file name: 2100_r_DR3_MBWM0_SX44_buccaneer1_8.wav
+Loss: 0.589721, pesq: 1.282352 to 1.617596, file name: 2200_r_DR3_MJVW0_SX383_buccaneer1_8.wav
+Loss: 0.412954, pesq: 1.305966 to 1.510213, file name: 2300_r_DR3_MTHC0_SX385_buccaneer1_8.wav
+Loss: 0.507502, pesq: 1.201674 to 1.704792, file name: 2400_r_DR4_FLBW0_SX49_buccaneer1_8.wav
+Loss: 0.726500, pesq: 1.224583 to 2.036849, file name: 2500_r_DR4_MDRM0_SX383_buccaneer1_8.wav
+Loss: 0.404416, pesq: 1.379075 to 1.976454, file name: 2600_r_DR4_MRKO0_SX47_buccaneer1_8.wav
+Loss: 1.318918, pesq: 1.309454 to 2.067935, file name: 2700_r_DR5_FJCS0_SX49_buccaneer1_8.wav
+Loss: 0.605300, pesq: 1.242110 to 1.606441, file name: 2800_r_DR5_MDAC2_SX99_buccaneer1_8.wav
+Loss: 1.291692, pesq: 1.261247 to 1.722468, file name: 2900_r_DR5_MRWS1_SX50_buccaneer1_8.wav
+Loss: 0.985241, pesq: 1.263077 to 1.718872, file name: 3000_r_DR6_MPAM1_SX396_buccaneer1_8.wav
+Loss: 0.860185, pesq: 1.194549 to 1.425040, file name: 3100_r_DR7_FTLH0_SX379_buccaneer1_8.wav
+Loss: 0.873577, pesq: 1.324430 to 1.452657, file name: 3200_r_DR7_MPAB0_SX48_buccaneer1_8.wav
+Loss: 0.530380, pesq: 1.205944 to 1.285525, file name: 3300_r_DR8_MDAW1_SX373_buccaneer1_8.wav
+noise: buccaneer1_8, pesq 1.304533 to 1.647891
+
+Loss: 0.483922, pesq: 1.241516 to 1.697497, file name: 3400_r_DR1_FJEM0_SX94_buccaneer2_8.wav
+Loss: 0.612806, pesq: 1.290280 to 1.681720, file name: 3500_r_DR2_FJAS0_SX50_buccaneer2_8.wav
+Loss: 0.328482, pesq: 1.121170 to 1.435746, file name: 3600_r_DR2_MDBB0_SX385_buccaneer2_8.wav
+Loss: 0.445975, pesq: 1.243868 to 1.573747, file name: 3700_r_DR2_MTAS1_SX388_buccaneer2_8.wav
+Loss: 0.521699, pesq: 1.160541 to 1.416174, file name: 3800_r_DR3_MCTW0_SX383_buccaneer2_8.wav
+Loss: 0.750360, pesq: 1.140309 to 1.211927, file name: 3900_r_DR3_MLNT0_SX372_buccaneer2_8.wav
+Loss: 0.567230, pesq: 1.163493 to 1.448109, file name: 4000_r_DR4_FADG0_SX379_buccaneer2_8.wav
+Loss: 0.457582, pesq: 1.275929 to 1.411706, file name: 4100_r_DR4_FMAF0_SX379_buccaneer2_8.wav
+Loss: 0.504571, pesq: 1.179483 to 1.474584, file name: 4200_r_DR4_MJDM1_SX95_buccaneer2_8.wav
+Loss: 0.499794, pesq: 1.188287 to 1.315889, file name: 4300_r_DR4_MTEB0_SX53_buccaneer2_8.wav
+Loss: 0.496051, pesq: 1.161047 to 1.511833, file name: 4400_r_DR5_FMAH0_SX389_buccaneer2_8.wav
+Loss: 0.368468, pesq: 1.306300 to 1.659598, file name: 4500_r_DR5_MDWA0_SX95_buccaneer2_8.wav
+Loss: 0.373468, pesq: 1.199526 to 1.499715, file name: 4600_r_DR6_FDRW0_SX383_buccaneer2_8.wav
+Loss: 0.469058, pesq: 1.251909 to 1.702670, file name: 4700_r_DR6_MRJS0_SX94_buccaneer2_8.wav
+Loss: 0.547946, pesq: 1.255934 to 1.444895, file name: 4800_r_DR7_MDLF0_SX53_buccaneer2_8.wav
+Loss: 0.689322, pesq: 1.262069 to 1.464028, file name: 4900_r_DR7_MRJM4_SX49_buccaneer2_8.wav
+Loss: 0.722810, pesq: 1.200848 to 1.666140, file name: 5000_r_DR8_MJTC0_SX380_buccaneer2_8.wav
+noise: buccaneer2_8, pesq 1.241088 to 1.480000
+
+Loss: 0.259861, pesq: 1.566051 to 2.425995, file name: 5100_r_DR1_MJSW0_SX380_destroyerengine_8.wav
+Loss: 1.611649, pesq: 1.372472 to 1.837855, file name: 5200_r_DR2_FJWB0_SX95_destroyerengine_8.wav
+Loss: 0.492804, pesq: 1.417986 to 1.999804, file name: 5300_r_DR2_MGWT0_SX99_destroyerengine_8.wav
+Loss: 0.452794, pesq: 1.386085 to 1.762978, file name: 5400_r_DR2_MWEW0_SX371_destroyerengine_8.wav
+Loss: 0.453951, pesq: 1.301123 to 1.990612, file name: 5500_r_DR3_MGLB0_SX94_destroyerengine_8.wav
+Loss: 1.078845, pesq: 1.425381 to 1.976858, file name: 5600_r_DR3_MMDH0_SX396_destroyerengine_8.wav
+Loss: 0.548389, pesq: 1.344033 to 1.791100, file name: 5700_r_DR4_FCRH0_SX98_destroyerengine_8.wav
+Loss: 1.107842, pesq: 1.382491 to 1.738715, file name: 5800_r_DR4_FNMR0_SX49_destroyerengine_8.wav
+Loss: 0.548064, pesq: 1.444451 to 1.904214, file name: 5900_r_DR4_MKCL0_SX371_destroyerengine_8.wav
+Loss: 0.444081, pesq: 1.298215 to 1.834098, file name: 6000_r_DR5_FASW0_SX380_destroyerengine_8.wav
+Loss: 0.437818, pesq: 1.192261 to 1.671620, file name: 6100_r_DR5_FUTB0_SX394_destroyerengine_8.wav
+Loss: 0.510906, pesq: 1.411395 to 1.836477, file name: 6200_r_DR5_MFGK0_SX394_destroyerengine_8.wav
+Loss: 0.409685, pesq: 1.336224 to 2.053807, file name: 6300_r_DR6_FMGD0_SX394_destroyerengine_8.wav
+Loss: 0.643932, pesq: 1.274665 to 1.796456, file name: 6400_r_DR7_FDHC0_SX389_destroyerengine_8.wav
+Loss: 0.468162, pesq: 1.436616 to 1.588135, file name: 6500_r_DR7_MERS0_SX389_destroyerengine_8.wav
+Loss: 0.507708, pesq: 1.526400 to 2.096695, file name: 6600_r_DR7_MRPC0_SX43_destroyerengine_8.wav
+Loss: 0.758538, pesq: 1.345488 to 1.855962, file name: 6700_r_DR8_MPAM0_SX379_destroyerengine_8.wav
+noise: destroyerengine_8, pesq 1.430663 to 1.841261
+
+Loss: 0.533890, pesq: 1.571012 to 1.988662, file name: 6800_r_DR1_MRJO0_SX374_destroyerops_8.wav
+Loss: 0.634940, pesq: 1.373776 to 1.721000, file name: 6900_r_DR2_FRAM1_SX370_destroyerops_8.wav
+Loss: 0.568632, pesq: 1.395193 to 1.971648, file name: 7000_r_DR2_MMDB1_SX95_destroyerops_8.wav
+Loss: 1.559730, pesq: 1.383052 to 1.844915, file name: 7100_r_DR3_FCMH0_SX374_destroyerops_8.wav
+Loss: 0.524738, pesq: 1.553616 to 1.807107, file name: 7200_r_DR3_MJBR0_SX371_destroyerops_8.wav
+Loss: 1.498883, pesq: 1.378380 to 1.831080, file name: 7300_r_DR3_MMWH0_SX99_destroyerops_8.wav
+Loss: 0.908601, pesq: 1.336007 to 1.973427, file name: 7400_r_DR4_FEDW0_SX94_destroyerops_8.wav
+Loss: 0.579028, pesq: 1.291275 to 1.898346, file name: 7500_r_DR4_FRNG0_SX95_destroyerops_8.wav
+Loss: 0.547699, pesq: 1.375894 to 2.047706, file name: 7600_r_DR4_MLLL0_SX373_destroyerops_8.wav
+Loss: 0.664447, pesq: 1.397798 to 1.799093, file name: 7700_r_DR5_FCAL1_SX53_destroyerops_8.wav
+Loss: 0.394372, pesq: 1.386545 to 1.895454, file name: 7800_r_DR5_MBPM0_SX47_destroyerops_8.wav
+Loss: 0.606547, pesq: 1.421873 to 1.816578, file name: 7900_r_DR5_MLIH0_SX373_destroyerops_8.wav
+Loss: 0.453768, pesq: 1.424875 to 1.454773, file name: 8000_r_DR6_MDSC0_SX48_destroyerops_8.wav
+Loss: 0.579230, pesq: 1.443744 to 1.722538, file name: 8100_r_DR7_FISB0_SX49_destroyerops_8.wav
+Loss: 0.562276, pesq: 1.346889 to 1.513182, file name: 8200_r_DR7_MKDR0_SX373_destroyerops_8.wav
+Loss: 0.639046, pesq: 1.365881 to 1.657207, file name: 8300_r_DR8_FCMH1_SX53_destroyerops_8.wav
+Loss: 0.832066, pesq: 1.542074 to 1.932236, file name: 8400_r_DR8_MSLB0_SX383_destroyerops_8.wav
+noise: destroyerops_8, pesq 1.435620 to 1.791606
+
+Loss: 0.518033, pesq: 1.508950 to 2.155372, file name: 8500_r_DR1_MSTK0_SX394_f16_8.wav
+Loss: 0.416074, pesq: 1.336717 to 1.938691, file name: 8600_r_DR2_MABW0_SX44_f16_8.wav
+Loss: 0.407531, pesq: 1.276953 to 2.246633, file name: 8700_r_DR2_MPDF0_SX372_f16_8.wav
+Loss: 0.646182, pesq: 1.350361 to 1.930311, file name: 8800_r_DR3_FPKT0_SX98_f16_8.wav
+Loss: 0.529972, pesq: 1.254993 to 1.377985, file name: 8900_r_DR3_MJJG0_SX373_f16_8.wav
+Loss: 0.471240, pesq: 1.446691 to 1.843054, file name: 9000_r_DR3_MTAA0_SX385_f16_8.wav
+Loss: 0.539144, pesq: 1.305183 to 1.555293, file name: 9100_r_DR4_FJLM0_SX53_f16_8.wav
+Loss: 0.565838, pesq: 1.417434 to 1.588267, file name: 9200_r_DR4_MBNS0_SX50_f16_8.wav
+Loss: 0.456772, pesq: 1.255456 to 1.640654, file name: 9300_r_DR4_MPLB0_SX44_f16_8.wav
+Loss: 0.607206, pesq: 1.328536 to 1.657280, file name: 9400_r_DR5_FHES0_SX389_f16_8.wav
+Loss: 0.742299, pesq: 1.288464 to 1.909918, file name: 9500_r_DR5_MCRC0_SX372_f16_8.wav
+Loss: 0.531196, pesq: 1.312934 to 1.389176, file name: 9600_r_DR5_MRPP0_SX374_f16_8.wav
+Loss: 0.473068, pesq: 1.504801 to 2.244537, file name: 9700_r_DR6_MJDH0_SX94_f16_8.wav
+Loss: 0.444005, pesq: 1.436711 to 1.910497, file name: 9800_r_DR7_FMML0_SX50_f16_8.wav
+Loss: 0.527494, pesq: 1.596750 to 1.898453, file name: 9900_r_DR7_MNJM0_SX50_f16_8.wav
+Loss: 0.424116, pesq: 1.382441 to 1.765907, file name: 10000_r_DR8_FMLD0_SX385_f16_8.wav
+noise: f16_8, pesq 1.415612 to 1.775350
+
+Loss: 1.655281, pesq: 1.263802 to 1.677537, file name: 10100_r_DR1_FDAC1_SX394_factory1_8.wav
+Loss: 0.702913, pesq: 1.382009 to 1.842322, file name: 10200_r_DR2_FCMR0_SX385_factory1_8.wav
+Loss: 0.576553, pesq: 1.554173 to 1.852275, file name: 10300_r_DR2_MCCS0_SX389_factory1_8.wav
+Loss: 1.154805, pesq: 1.306695 to 1.717326, file name: 10400_r_DR2_MRCZ0_SX371_factory1_8.wav
+Loss: 0.575426, pesq: 1.594921 to 1.756079, file name: 10500_r_DR3_MBWM0_SX44_factory1_8.wav
+Loss: 0.460730, pesq: 1.354777 to 1.874403, file name: 10600_r_DR3_MJVW0_SX383_factory1_8.wav
+Loss: 0.539166, pesq: 1.456295 to 1.830649, file name: 10700_r_DR3_MTHC0_SX385_factory1_8.wav
+Loss: 1.871473, pesq: 1.272445 to 2.002238, file name: 10800_r_DR4_FLBW0_SX49_factory1_8.wav
+Loss: 0.539260, pesq: 1.336312 to 2.043831, file name: 10900_r_DR4_MDRM0_SX383_factory1_8.wav
+Loss: 0.757442, pesq: 1.516811 to 1.992984, file name: 11000_r_DR4_MRKO0_SX47_factory1_8.wav
+Loss: 0.444772, pesq: 1.387094 to 2.338171, file name: 11100_r_DR5_FJCS0_SX49_factory1_8.wav
+Loss: 0.596174, pesq: 1.326110 to 1.830733, file name: 11200_r_DR5_MDAC2_SX99_factory1_8.wav
+Loss: 0.623170, pesq: 1.377939 to 1.881708, file name: 11300_r_DR5_MRWS1_SX50_factory1_8.wav
+Loss: 0.749874, pesq: 1.382911 to 1.888469, file name: 11400_r_DR6_MPAM1_SX396_factory1_8.wav
+Loss: 0.670734, pesq: 1.301881 to 1.385162, file name: 11500_r_DR7_FTLH0_SX379_factory1_8.wav
+Loss: 0.513891, pesq: 1.499269 to 1.544144, file name: 11600_r_DR7_MPAB0_SX48_factory1_8.wav
+Loss: 0.696734, pesq: 1.320680 to 1.397483, file name: 11700_r_DR8_MDAW1_SX373_factory1_8.wav
+noise: factory1_8, pesq 1.414580 to 1.790693
+
+Loss: 0.554681, pesq: 1.466921 to 2.185869, file name: 11800_r_DR1_FJEM0_SX94_factory2_8.wav
+Loss: 1.248944, pesq: 1.544345 to 2.010527, file name: 11900_r_DR2_FJAS0_SX50_factory2_8.wav
+Loss: 0.697673, pesq: 1.401279 to 1.806078, file name: 12000_r_DR2_MDBB0_SX385_factory2_8.wav
+Loss: 0.527377, pesq: 1.678902 to 2.006630, file name: 12100_r_DR2_MTAS1_SX388_factory2_8.wav
+Loss: 0.617922, pesq: 1.434330 to 1.570295, file name: 12200_r_DR3_MCTW0_SX383_factory2_8.wav
+Loss: 0.615244, pesq: 1.341527 to 1.407357, file name: 12300_r_DR3_MLNT0_SX372_factory2_8.wav
+Loss: 0.876756, pesq: 1.346018 to 1.666441, file name: 12400_r_DR4_FADG0_SX379_factory2_8.wav
+Loss: 0.435854, pesq: 1.533420 to 1.639349, file name: 12500_r_DR4_FMAF0_SX379_factory2_8.wav
+Loss: 0.659392, pesq: 1.561734 to 2.121016, file name: 12600_r_DR4_MJDM1_SX95_factory2_8.wav
+Loss: 0.486659, pesq: 1.416931 to 1.501639, file name: 12700_r_DR4_MTEB0_SX53_factory2_8.wav
+Loss: 0.603418, pesq: 1.309289 to 1.797378, file name: 12800_r_DR5_FMAH0_SX389_factory2_8.wav
+Loss: 0.885643, pesq: 1.637218 to 2.214896, file name: 12900_r_DR5_MDWA0_SX95_factory2_8.wav
+Loss: 0.602900, pesq: 1.469345 to 2.112114, file name: 13000_r_DR6_FDRW0_SX383_factory2_8.wav
+Loss: 0.576787, pesq: 1.593352 to 2.165103, file name: 13100_r_DR6_MRJS0_SX94_factory2_8.wav
+Loss: 0.582291, pesq: 1.622653 to 1.964471, file name: 13200_r_DR7_MDLF0_SX53_factory2_8.wav
+Loss: 0.531991, pesq: 1.738683 to 2.040286, file name: 13300_r_DR7_MRJM4_SX49_factory2_8.wav
+Loss: 0.521775, pesq: 1.468562 to 1.835850, file name: 13400_r_DR8_MJTC0_SX380_factory2_8.wav
+noise: factory2_8, pesq 1.546086 to 1.842727
+
+Loss: 0.275708, pesq: 1.521464 to 2.450742, file name: 13500_r_DR1_MJSW0_SX380_hfchannel_8.wav
+Loss: 2.501388, pesq: 1.318836 to 1.924290, file name: 13600_r_DR2_FJWB0_SX95_hfchannel_8.wav
+Loss: 0.420915, pesq: 1.363301 to 1.911114, file name: 13700_r_DR2_MGWT0_SX99_hfchannel_8.wav
+Loss: 2.344398, pesq: 1.247375 to 1.588808, file name: 13800_r_DR2_MWEW0_SX371_hfchannel_8.wav
+Loss: 0.595167, pesq: 1.356482 to 1.712516, file name: 13900_r_DR3_MGLB0_SX94_hfchannel_8.wav
+Loss: 1.831017, pesq: 1.301879 to 1.703408, file name: 14000_r_DR3_MMDH0_SX396_hfchannel_8.wav
+Loss: 0.420079, pesq: 1.227246 to 1.731211, file name: 14100_r_DR4_FCRH0_SX98_hfchannel_8.wav
+Loss: 3.500165, pesq: 1.270031 to 1.592503, file name: 14200_r_DR4_FNMR0_SX49_hfchannel_8.wav
+Loss: 0.425993, pesq: 1.351846 to 1.819215, file name: 14300_r_DR4_MKCL0_SX371_hfchannel_8.wav
+Loss: 0.379258, pesq: 1.236627 to 1.770204, file name: 14400_r_DR5_FASW0_SX380_hfchannel_8.wav
+Loss: 0.421939, pesq: 1.160820 to 1.714279, file name: 14500_r_DR5_FUTB0_SX394_hfchannel_8.wav
+Loss: 0.432784, pesq: 1.350451 to 1.781731, file name: 14600_r_DR5_MFGK0_SX394_hfchannel_8.wav
+Loss: 0.944109, pesq: 1.219015 to 1.775968, file name: 14700_r_DR6_FMGD0_SX394_hfchannel_8.wav
+Loss: 0.440900, pesq: 1.194412 to 1.786636, file name: 14800_r_DR7_FDHC0_SX389_hfchannel_8.wav
+Loss: 0.526902, pesq: 1.318516 to 1.470237, file name: 14900_r_DR7_MERS0_SX389_hfchannel_8.wav
+Loss: 2.892326, pesq: 1.326325 to 1.809490, file name: 15000_r_DR7_MRPC0_SX43_hfchannel_8.wav
+Loss: 0.417968, pesq: 1.243155 to 1.608154, file name: 15100_r_DR8_MPAM0_SX379_hfchannel_8.wav
+noise: hfchannel_8, pesq 1.349239 to 1.718896
+
+Loss: 0.598262, pesq: 1.518970 to 1.835793, file name: 15200_r_DR1_MRJO0_SX374_leopard_8.wav
+Loss: 0.615422, pesq: 1.423298 to 1.656922, file name: 15300_r_DR2_FRAM1_SX370_leopard_8.wav
+Loss: 0.540540, pesq: 1.541973 to 2.138355, file name: 15400_r_DR2_MMDB1_SX95_leopard_8.wav
+Loss: 0.610417, pesq: 1.397920 to 1.908890, file name: 15500_r_DR3_FCMH0_SX374_leopard_8.wav
+Loss: 0.783563, pesq: 1.693918 to 1.853232, file name: 15600_r_DR3_MJBR0_SX371_leopard_8.wav
+Loss: 1.129699, pesq: 1.472736 to 1.953455, file name: 15700_r_DR3_MMWH0_SX99_leopard_8.wav
+Loss: 0.559844, pesq: 1.389238 to 1.968220, file name: 15800_r_DR4_FEDW0_SX94_leopard_8.wav
+Loss: 0.474193, pesq: 1.272457 to 2.040599, file name: 15900_r_DR4_FRNG0_SX95_leopard_8.wav
+Loss: 0.723558, pesq: 1.447944 to 2.114930, file name: 16000_r_DR4_MLLL0_SX373_leopard_8.wav
+Loss: 0.514175, pesq: 1.421418 to 1.949161, file name: 16100_r_DR5_FCAL1_SX53_leopard_8.wav
+Loss: 1.928103, pesq: 1.465631 to 1.768203, file name: 16200_r_DR5_MBPM0_SX47_leopard_8.wav
+Loss: 0.496682, pesq: 1.499060 to 1.810721, file name: 16300_r_DR5_MLIH0_SX373_leopard_8.wav
+Loss: 1.211655, pesq: 1.764014 to 1.480745, file name: 16400_r_DR6_MDSC0_SX48_leopard_8.wav
+Loss: 0.587469, pesq: 1.456021 to 1.917964, file name: 16500_r_DR7_FISB0_SX49_leopard_8.wav
+Loss: 0.616984, pesq: 1.433167 to 1.562532, file name: 16600_r_DR7_MKDR0_SX373_leopard_8.wav
+Loss: 0.680044, pesq: 1.390532 to 1.634063, file name: 16700_r_DR8_FCMH1_SX53_leopard_8.wav
+Loss: 0.709111, pesq: 1.682550 to 1.887117, file name: 16800_r_DR8_MSLB0_SX383_leopard_8.wav
+noise: leopard_8, pesq 1.505157 to 1.833181
+
+Loss: 0.604921, pesq: 1.829605 to 1.893115, file name: 16900_r_DR1_MSTK0_SX394_m109_8.wav
+Loss: 0.394416, pesq: 1.600011 to 1.982308, file name: 17000_r_DR2_MABW0_SX44_m109_8.wav
+Loss: 0.499552, pesq: 1.474595 to 2.508868, file name: 17100_r_DR2_MPDF0_SX372_m109_8.wav
+Loss: 0.462556, pesq: 1.524435 to 1.982388, file name: 17200_r_DR3_FPKT0_SX98_m109_8.wav
+Loss: 12.259137, pesq: 1.647155 to 1.635662, file name: 17300_r_DR3_MJJG0_SX373_m109_8.wav
+Loss: 0.419944, pesq: 1.574322 to 1.849622, file name: 17400_r_DR3_MTAA0_SX385_m109_8.wav
+Loss: 0.929926, pesq: 1.546915 to 1.789601, file name: 17500_r_DR4_FJLM0_SX53_m109_8.wav
+Loss: 0.663222, pesq: 1.750339 to 1.646134, file name: 17600_r_DR4_MBNS0_SX50_m109_8.wav
+Loss: 0.466085, pesq: 1.547310 to 1.773267, file name: 17700_r_DR4_MPLB0_SX44_m109_8.wav
+Loss: 0.482572, pesq: 1.521164 to 1.741564, file name: 17800_r_DR5_FHES0_SX389_m109_8.wav
+Loss: 0.723224, pesq: 1.550364 to 1.960650, file name: 17900_r_DR5_MCRC0_SX372_m109_8.wav
+Loss: 0.666436, pesq: 1.563590 to 1.596960, file name: 18000_r_DR5_MRPP0_SX374_m109_8.wav
+Loss: 0.406318, pesq: 1.639057 to 2.538568, file name: 18100_r_DR6_MJDH0_SX94_m109_8.wav
+Loss: 0.798164, pesq: 1.600970 to 2.153025, file name: 18200_r_DR7_FMML0_SX50_m109_8.wav
+Loss: 0.657722, pesq: 1.904057 to 1.904068, file name: 18300_r_DR7_MNJM0_SX50_m109_8.wav
+Loss: 0.717187, pesq: 1.569941 to 1.832447, file name: 18400_r_DR8_FMLD0_SX385_m109_8.wav
+noise: m109_8, pesq 1.619209 to 1.920296
+
+Seen test loss: 0.75497836 pesq: 1.39860482 to 1.80200799
+
+UNSEEN TEST
+Loss: 0.373750, pesq: 1.707447 to 1.541830, file name: 100_r_DR1_MSTK0_SX394_machinegun_8.wav
+Loss: 0.401504, pesq: 1.611711 to 1.597718, file name: 200_r_DR2_MABW0_SX44_machinegun_8.wav
+Loss: 0.343208, pesq: 1.363340 to 2.136817, file name: 300_r_DR2_MPDF0_SX372_machinegun_8.wav
+Loss: 0.469633, pesq: 1.474323 to 1.780365, file name: 400_r_DR3_FPKT0_SX98_machinegun_8.wav
+Loss: 1.118363, pesq: 1.496326 to 1.334331, file name: 500_r_DR3_MJJG0_SX373_machinegun_8.wav
+Loss: 0.323185, pesq: 1.732393 to 1.712644, file name: 600_r_DR3_MTAA0_SX385_machinegun_8.wav
+Loss: 0.510412, pesq: 1.441108 to 1.809313, file name: 700_r_DR4_FJLM0_SX53_machinegun_8.wav
+Loss: 0.366300, pesq: 1.724559 to 1.514008, file name: 800_r_DR4_MBNS0_SX50_machinegun_8.wav
+Loss: 0.462140, pesq: 1.535537 to 1.760774, file name: 900_r_DR4_MPLB0_SX44_machinegun_8.wav
+Loss: 0.386559, pesq: 1.578887 to 1.672452, file name: 1000_r_DR5_FHES0_SX389_machinegun_8.wav
+Loss: 0.430361, pesq: 1.628928 to 1.803187, file name: 1100_r_DR5_MCRC0_SX372_machinegun_8.wav
+Loss: 0.322712, pesq: 1.501431 to 1.285670, file name: 1200_r_DR5_MRPP0_SX374_machinegun_8.wav
+Loss: 0.325458, pesq: 2.158980 to 2.160409, file name: 1300_r_DR6_MJDH0_SX94_machinegun_8.wav
+Loss: 0.381810, pesq: 1.449090 to 1.728021, file name: 1400_r_DR7_FMML0_SX50_machinegun_8.wav
+Loss: 0.419685, pesq: 1.906632 to 1.409092, file name: 1500_r_DR7_MNJM0_SX50_machinegun_8.wav
+Loss: 0.374882, pesq: 1.512545 to 1.589589, file name: 1600_r_DR8_FMLD0_SX385_machinegun_8.wav
+noise: machinegun_8, pesq 1.613952 to 1.677264
+
+Loss: 0.483671, pesq: 1.323436 to 1.757012, file name: 1700_r_DR1_FDAC1_SX394_pink_8.wav
+Loss: 0.498641, pesq: 1.366565 to 1.943632, file name: 1800_r_DR2_FCMR0_SX385_pink_8.wav
+Loss: 0.476542, pesq: 1.493966 to 1.851673, file name: 1900_r_DR2_MCCS0_SX389_pink_8.wav
+Loss: 0.533874, pesq: 1.295018 to 1.808458, file name: 2000_r_DR2_MRCZ0_SX371_pink_8.wav
+Loss: 0.560341, pesq: 1.426446 to 1.523737, file name: 2100_r_DR3_MBWM0_SX44_pink_8.wav
+Loss: 0.539524, pesq: 1.350652 to 1.735216, file name: 2200_r_DR3_MJVW0_SX383_pink_8.wav
+Loss: 0.596156, pesq: 1.369155 to 1.714831, file name: 2300_r_DR3_MTHC0_SX385_pink_8.wav
+Loss: 0.772480, pesq: 1.259481 to 2.031148, file name: 2400_r_DR4_FLBW0_SX49_pink_8.wav
+Loss: 0.462819, pesq: 1.287468 to 1.865770, file name: 2500_r_DR4_MDRM0_SX383_pink_8.wav
+Loss: 0.451494, pesq: 1.418300 to 1.849285, file name: 2600_r_DR4_MRKO0_SX47_pink_8.wav
+Loss: 0.905500, pesq: 1.406452 to 2.110086, file name: 2700_r_DR5_FJCS0_SX49_pink_8.wav
+Loss: 0.404291, pesq: 1.321991 to 1.764028, file name: 2800_r_DR5_MDAC2_SX99_pink_8.wav
+Loss: 0.373311, pesq: 1.319594 to 1.910982, file name: 2900_r_DR5_MRWS1_SX50_pink_8.wav
+Loss: 1.007647, pesq: 1.328684 to 1.743541, file name: 3000_r_DR6_MPAM1_SX396_pink_8.wav
+Loss: 1.649327, pesq: 1.266874 to 1.415589, file name: 3100_r_DR7_FTLH0_SX379_pink_8.wav
+Loss: 0.569831, pesq: 1.387247 to 1.522439, file name: 3200_r_DR7_MPAB0_SX48_pink_8.wav
+Loss: 0.429185, pesq: 1.258837 to 1.538389, file name: 3300_r_DR8_MDAW1_SX373_pink_8.wav
+noise: pink_8, pesq 1.371397 to 1.744249
+
+Loss: 0.399988, pesq: 2.293046 to 2.486875, file name: 3400_r_DR1_FJEM0_SX94_volvo_8.wav
+Loss: 0.437442, pesq: 2.173544 to 2.138380, file name: 3500_r_DR2_FJAS0_SX50_volvo_8.wav
+Loss: 0.536971, pesq: 2.306567 to 2.494171, file name: 3600_r_DR2_MDBB0_SX385_volvo_8.wav
+Loss: 0.438044, pesq: 2.259716 to 2.160880, file name: 3700_r_DR2_MTAS1_SX388_volvo_8.wav
+Loss: 0.454965, pesq: 2.007494 to 1.971684, file name: 3800_r_DR3_MCTW0_SX383_volvo_8.wav
+Loss: 0.390401, pesq: 1.624450 to 1.633788, file name: 3900_r_DR3_MLNT0_SX372_volvo_8.wav
+Loss: 0.760613, pesq: 1.994191 to 1.973814, file name: 4000_r_DR4_FADG0_SX379_volvo_8.wav
+Loss: 0.453637, pesq: 2.313043 to 1.724802, file name: 4100_r_DR4_FMAF0_SX379_volvo_8.wav
+Loss: 0.490697, pesq: 2.340976 to 2.586874, file name: 4200_r_DR4_MJDM1_SX95_volvo_8.wav
+Loss: 0.429734, pesq: 1.968987 to 1.919842, file name: 4300_r_DR4_MTEB0_SX53_volvo_8.wav
+Loss: 0.591716, pesq: 2.036630 to 2.192735, file name: 4400_r_DR5_FMAH0_SX389_volvo_8.wav
+Loss: 0.557092, pesq: 2.392182 to 2.335755, file name: 4500_r_DR5_MDWA0_SX95_volvo_8.wav
+Loss: 0.612981, pesq: 2.333255 to 2.414091, file name: 4600_r_DR6_FDRW0_SX383_volvo_8.wav
+Loss: 0.435058, pesq: 2.279238 to 2.497795, file name: 4700_r_DR6_MRJS0_SX94_volvo_8.wav
+Loss: 0.406418, pesq: 2.344987 to 2.052919, file name: 4800_r_DR7_MDLF0_SX53_volvo_8.wav
+Loss: 0.478350, pesq: 2.353317 to 2.360814, file name: 4900_r_DR7_MRJM4_SX49_volvo_8.wav
+Loss: 0.491040, pesq: 1.948772 to 2.261986, file name: 5000_r_DR8_MJTC0_SX380_volvo_8.wav
+noise: volvo_8, pesq 2.186131 to 2.177257
+
+Loss: 0.503408, pesq: 1.436804 to 2.019650, file name: 5100_r_DR1_MJSW0_SX380_white_8.wav
+Loss: 0.536488, pesq: 1.272130 to 1.739895, file name: 5200_r_DR2_FJWB0_SX95_white_8.wav
+Loss: 0.434676, pesq: 1.313184 to 1.800609, file name: 5300_r_DR2_MGWT0_SX99_white_8.wav
+Loss: 0.320005, pesq: 1.193534 to 1.564629, file name: 5400_r_DR2_MWEW0_SX371_white_8.wav
+Loss: 0.444618, pesq: 1.238241 to 1.725854, file name: 5500_r_DR3_MGLB0_SX94_white_8.wav
+Loss: 0.510034, pesq: 1.247179 to 1.719668, file name: 5600_r_DR3_MMDH0_SX396_white_8.wav
+Loss: 0.279121, pesq: 1.200986 to 1.723597, file name: 5700_r_DR4_FCRH0_SX98_white_8.wav
+Loss: 2.207169, pesq: 1.201043 to 1.493596, file name: 5800_r_DR4_FNMR0_SX49_white_8.wav
+Loss: 0.460531, pesq: 1.276797 to 1.856923, file name: 5900_r_DR4_MKCL0_SX371_white_8.wav
+Loss: 1.803907, pesq: 1.191592 to 1.637625, file name: 6000_r_DR5_FASW0_SX380_white_8.wav
+Loss: 0.346792, pesq: 1.154930 to 1.677137, file name: 6100_r_DR5_FUTB0_SX394_white_8.wav
+Loss: 0.678906, pesq: 1.252902 to 1.504999, file name: 6200_r_DR5_MFGK0_SX394_white_8.wav
+Loss: 0.476747, pesq: 1.189960 to 1.594081, file name: 6300_r_DR6_FMGD0_SX394_white_8.wav
+Loss: 0.442055, pesq: 1.171521 to 1.775868, file name: 6400_r_DR7_FDHC0_SX389_white_8.wav
+Loss: 0.477552, pesq: 1.252337 to 1.351306, file name: 6500_r_DR7_MERS0_SX389_white_8.wav
+Loss: 0.944212, pesq: 1.229845 to 1.698822, file name: 6600_r_DR7_MRPC0_SX43_white_8.wav
+Loss: 0.417775, pesq: 1.180570 to 1.556237, file name: 6700_r_DR8_MPAM0_SX379_white_8.wav
+noise: white_8, pesq 1.269788 to 1.638685
+
+Unseen test loss: 0.60188050 pesq: 1.59219934 to 1.82939905
+

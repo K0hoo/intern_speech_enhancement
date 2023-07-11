@@ -2,53 +2,109 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run mag-phase model",
+            "name": "RUN: magnitude wiener filter TCN",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "args": [
                 "--root_folder", "${workspaceFolder}",
                 "--data_root_folder", "${workspaceFolder}/dataset/",
-                "--sub_folder", "simple_magnitude"
+                "--target_type", "wiener_mag",
+                "--model", "TCN",
+                "--no-train"
             ],
             "console": "integratedTerminal",
         },
         {
-            "name": "Run real-img model",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/main.py",
-            "args": [
-                "--root_folder", "${workspaceFolder}",
-                "--datar_root_folder", "${workspaceFolder}/dataset/",
-                "--sub_folder", "simple_real_imag"
-            ],
-            "console": "integratedTerminal",
-        },
-        {
-            "name": "Run wiener filter model",
+            "name": "RUN: magnitude wiener filter LSTM",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "args": [
                 "--root_folder", "${workspaceFolder}",
                 "--data_root_folder", "${workspaceFolder}/dataset/",
-                "--sub_folder", "wiener_magnitude",
-                "--continue_epoch", "5",
+                "--target_type", "wiener_mag",
+                "--model", "LSTM"
             ],
             "console": "integratedTerminal",
         },
         {
-            "name": "Run log-wiener filter model",
+            "name": "RUN: log magnitude wiener filter TCN",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "args": [
                 "--root_folder", "${workspaceFolder}",
                 "--data_root_folder", "${workspaceFolder}/dataset/",
-                "--sub_folder", "wiener_log_magnitude",
-                "--no-train",
-                "--continue_epoch", "200"
+                "--target_type", "wiener_log_mag",
+                "--model", "TCN",
+                "--no-train"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RUN: log magnitude wiener filter LSTM",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--target_type", "wiener_log_mag",
+                "--model", "LSTM",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RUN: magnitude TCN",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--target_type", "magnitude",
+                "--model", "TCN"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RUN: magnitude LSTM",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--target_type", "magnitude",
+                "--model", "LSTM"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RUN: complex CRN filter TCN",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--target_type", "crm_complex",
+                "--model", "TCN",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RUN: complex CRN filter LSTM",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--root_folder", "${workspaceFolder}",
+                "--data_root_folder", "${workspaceFolder}/dataset/",
+                "--target_type", "crm_complex",
+                "--model", "LSTM",
+                "--no-train"
             ],
             "console": "integratedTerminal",
         },

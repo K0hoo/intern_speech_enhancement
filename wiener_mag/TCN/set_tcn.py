@@ -12,7 +12,7 @@ from wiener_mag.execute import train, test
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # set hyper-parameters
-continue_epoch = 106 # int value; the epoch that training is resumed
+continue_epoch = 0 # int value; the epoch that training is resumed
 num_epochs = 300 # int value; the epoch that training is ended
 batch_size = 64
 learning_rate = 0.004

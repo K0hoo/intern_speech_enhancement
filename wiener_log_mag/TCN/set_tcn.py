@@ -13,9 +13,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # set hyper-parameters
 continue_epoch = 0 # int value; the epoch that training is resumed
-num_epochs = 200 # int value; the epoch that training is ended
+num_epochs = 300 # int value; the epoch that training is ended
 batch_size = 64
-learning_rate = 0.004
+learning_rate = 0.005
 validation_ratio = 5 # int value; train:validation = <int value>-1:1
 num_workers = 6
 
@@ -28,7 +28,7 @@ kernel_size = 3
 model = Wiener_TCN(input_size, input_size, num_channels, kernel_size, causal).to(device)
 criterion = nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
-scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.2, patience=3, cooldown=2)
+scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.5, patience=3, cooldown=2)
 scaler = torch.cuda.amp.GradScaler()
 
 # set data_format

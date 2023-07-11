@@ -4,6 +4,7 @@ import argparse
 from crm_complex import main as crm_complex
 from wiener_mag import main as wiener_mag
 from wiener_log_mag import main as wiener_log_mag
+from crm_complex import main as crm_complex_sisnr
 
 """
 When you want to test other situations, follow the below step.
@@ -16,7 +17,8 @@ When you want to test other situations, follow the below step.
 target_dict = {
     'wiener_mag': wiener_mag,
     'wiener_log_mag': wiener_log_mag,
-    'crm_complex': crm_complex
+    'crm_complex': crm_complex,
+    'crm_complex_sisnr': crm_complex_sisnr
 }
 
 if __name__ == "__main__":

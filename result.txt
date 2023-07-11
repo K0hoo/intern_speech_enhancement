@@ -1,0 +1,21 @@
+CRM
+LSTM validation: 0.412157 seen test: 0.754978 unseen test: 0.601880
+PESQ R - seen 1.398604 to 1.641047 unseen 1.521993 to 1.623071
+PESQ C - seen 1.398604 to 1.802007 unseen 1.521993 to 1.802007
+PESQ E - seen 1.398604 to 1.802007 unseen 1.521993 to 1.829399
+TCN validation: 0.411688 seen test: 0.737223 unseen test: 0.576855
+PESQ R - seen 1.398604 to 1.634225 unseen 1.521993 to 1.631385
+PESQ C - seen 1.398604 to 1.949530 unseen 1.521993 to 2.022823
+PESQ E - seen 1.398604 to 1.949529 unseen 1.521993 to 2.022823
+
+Wiener
+LSTM validation: 0.047286 seen test: 0.046580 unseen test: 0.068166
+PESQ - seen 1.398604 to 2.718569 unseen 1.592198  to 2.715694
+TCN validation: 0.048796 seen test: 0.047864 unseen test: 0.066327
+PESQ - seen 1.398604 to 2.684488 unseen 1.592198  to 2.750475
+
+Log-Wiener
+LSTM validation: seen test: unseen test: 
+PESQ - seen 1.398604 to unseen 1.592198  to 
+TCN validation: 0.046696 seen test: 0.045843 unseen test: 0.064218
+PESQ - seen 1.398604 to 2.790508 unseen 1.592198  to 2.835575
